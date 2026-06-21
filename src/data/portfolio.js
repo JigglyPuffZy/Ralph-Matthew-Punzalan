@@ -7,6 +7,7 @@ export const resumeDownloadName = 'Ralph_Matthew_Punzalan_Resume.pdf'
 
 export const lockedPortfolioProjectIds = new Set([
   'marians-pottery',
+  'network-homeowners',
   'quiz-whirl-app',
   'trireg-mobile-app',
   'trireg-web',
@@ -17,5 +18,9 @@ export const lockedPortfolioProjectIds = new Set([
 export const isLockedPortfolioProject = (projectId, categoryType) =>
   (categoryType === 'web' || categoryType === 'mobile') && lockedPortfolioProjectIds.has(projectId)
 
-export const getProjectActionLabel = (project) =>
-  project.actionLabel ?? (project.liveUrl ? 'View Page' : 'View Portfolio')
+export const getProjectActionLabel = (project) => {
+  if (project.actionLabel) return project.actionLabel
+  if (project.categoryId === 'figma-projects' && project.liveUrl) return 'View Figma'
+  if (project.liveUrl) return 'View Page'
+  return 'View Portfolio'
+}

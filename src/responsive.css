@@ -992,7 +992,7 @@
   }
 
   .my-experience {
-    padding: 48px 20px 72px;
+    padding: 40px 16px calc(64px + env(safe-area-inset-bottom));
   }
 
   .my-experience__top {
@@ -1074,7 +1074,12 @@
   }
 
   .my-experience__intro h2 {
-    font-size: clamp(2rem, 10vw, 2.6rem);
+    font-size: clamp(1.75rem, 8.5vw, 2.35rem);
+    line-height: 1.12;
+  }
+
+  .my-experience__timeline-hint {
+    font-size: 0.54rem;
   }
 
   .contact-us__intro h2 {

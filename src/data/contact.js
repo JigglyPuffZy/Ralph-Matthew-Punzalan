@@ -14,8 +14,8 @@ export const contactChannels = [
     title: 'Email Me',
   },
   {
-    detail: '+63 912 345 6789',
-    href: 'tel:+639123456789',
+    detail: '0945 338 6067',
+    href: 'tel:+639453386067',
     icon: 'phone',
     title: 'Call Me',
   },

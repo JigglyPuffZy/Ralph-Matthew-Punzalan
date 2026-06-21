@@ -95,15 +95,7 @@ export default function FeaturedWorkSection({ featured }) {
                   ))}
                 </div>
                 <div className="featured-work__actions">
-                  {activeProject.liveUrl ? (
-                    <a className="featured-work__demo" href={activeProject.liveUrl} target="_blank" rel="noreferrer">
-                      {getProjectActionLabel(activeProject)}
-                      <svg aria-hidden="true" viewBox="0 0 24 24">
-                        <path d="M7 17 17 7" />
-                        <path d="M9 7h8v8" />
-                      </svg>
-                    </a>
-                  ) : isLockedPortfolioProject(activeProject.id, activeCategory.type) ? (
+                  {isLockedPortfolioProject(activeProject.id, activeCategory.type) ? (
                     <button
                       aria-disabled="true"
                       className="featured-work__demo featured-work__demo--locked"
@@ -116,6 +108,14 @@ export default function FeaturedWorkSection({ featured }) {
                         <path d="M8 11V8a4 4 0 0 1 8 0v3" />
                       </svg>
                     </button>
+                  ) : activeProject.liveUrl ? (
+                    <a className="featured-work__demo" href={activeProject.liveUrl} target="_blank" rel="noreferrer">
+                      {getProjectActionLabel(activeProject)}
+                      <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M7 17 17 7" />
+                        <path d="M9 7h8v8" />
+                      </svg>
+                    </a>
                   ) : (
                     <a className="featured-work__demo" href={portfolioUrl} target="_blank" rel="noreferrer">
                       View Portfolio

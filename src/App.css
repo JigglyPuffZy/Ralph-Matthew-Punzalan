@@ -5889,6 +5889,10 @@ html {
   text-transform: uppercase;
 }
 
+.my-experience__timeline-hint {
+  display: none;
+}
+
 .my-experience__timeline ul {
   display: grid;
   gap: 0;
@@ -6557,23 +6561,80 @@ html {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
+  #experience {
+    scroll-margin-top: max(68px, calc(env(safe-area-inset-top) + 52px));
+  }
+
   .my-experience {
-    padding: 28px 18px 72px;
+    padding: 40px 16px calc(64px + env(safe-area-inset-bottom));
+  }
+
+  .my-experience__inner {
+    gap: 18px;
+    padding-inline: 0;
+  }
+
+  .my-experience__top {
+    margin-bottom: 8px;
+  }
+
+  .my-experience__intro p {
+    max-width: none;
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .my-experience__layout {
+    display: grid;
+    grid-template-areas:
+      'timeline-heading'
+      'timeline-list'
+      'detail'
+      'resume';
+    gap: 14px;
   }
 
   .my-experience__timeline {
-    padding: 16px 14px;
+    display: contents;
+    min-height: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .my-experience__timeline h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: timeline-heading;
+    margin: 0;
+    padding: 0 2px;
+  }
+
+  .my-experience__timeline-hint {
+    display: inline;
+    color: rgba(237, 233, 254, 0.42);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: none;
   }
 
   .my-experience__timeline ul {
     display: flex;
-    gap: 10px;
+    grid-area: timeline-list;
+    gap: 12px;
     overflow-x: auto;
-    padding: 0 0 8px;
+    overscroll-behavior-x: contain;
+    margin: 0 -16px;
+    padding: 2px 16px 10px;
     border-left: 0;
-    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 16px;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
   .my-experience__timeline ul::-webkit-scrollbar {
@@ -6581,7 +6642,8 @@ html {
   }
 
   .my-experience__timeline li {
-    flex: 0 0 min(82vw, 280px);
+    flex: 0 0 min(76vw, 280px);
+    scroll-snap-align: start;
     padding-left: 0;
   }
 
@@ -6590,30 +6652,153 @@ html {
   }
 
   .my-experience__timeline-item {
-    min-height: 132px;
+    min-height: 118px;
+    height: 100%;
     margin: 0;
-    padding: 14px;
-    border: 1px solid rgba(var(--accent-bright-rgb), 0.12);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.02);
+    padding: 14px 16px;
+    border: 1px solid rgba(var(--accent-bright-rgb), 0.14);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
   }
 
   .my-experience__timeline-item--active {
     margin-left: 0;
+    border-color: rgba(var(--accent-bright-rgb), 0.32);
+    background: rgba(var(--accent-rgb), 0.12);
+    box-shadow: 0 0 24px rgba(var(--accent-rgb), 0.14);
+  }
+
+  .my-experience__timeline-item strong {
+    font-size: 0.84rem;
+    line-height: 1.35;
+  }
+
+  .my-experience__timeline-item em {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 0.7rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .my-experience__resume {
+    grid-area: resume;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 0;
+    border-radius: 16px;
+  }
+
+  .my-experience__detail {
+    grid-area: detail;
+    gap: 16px;
+    padding: 18px 16px;
+    border-radius: 20px;
   }
 
   .my-experience__role {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .my-experience__role-main {
+    gap: 12px;
+    width: 100%;
+  }
+
+  .my-experience__role-copy {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .my-experience__role-copy h3 {
+    font-size: 1.12rem;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  .my-experience__company-name {
+    word-break: break-word;
+  }
+
+  .my-experience__role-meta {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .my-experience__duration {
+    align-self: flex-start;
+  }
+
+  .my-experience__summary-text {
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+
+  .my-experience__focus-row,
+  .my-experience__stack {
+    gap: 6px;
+  }
+
+  .my-experience__focus-pill,
+  .my-experience__stack-pill {
+    min-height: 28px;
+    font-size: 0.62rem;
+  }
+
+  .my-experience__content-grid {
+    gap: 12px;
+  }
+
+  .my-experience__content-card {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .my-experience__responsibility-list li,
+  .my-experience__achievement-list article {
+    gap: 10px;
+  }
+
+  .my-experience__achievement-list p {
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 560px) {
+  .my-experience {
+    padding: 28px 14px calc(56px + env(safe-area-inset-bottom));
+  }
+
+  .my-experience__timeline li {
+    flex-basis: min(84vw, 280px);
+  }
+
+  .my-experience__timeline-item {
+    min-height: 110px;
+    padding: 12px 14px;
   }
 
   .my-experience__company-mark {
-    width: 56px;
-    height: 56px;
-    font-size: 0.95rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    font-size: 0.88rem;
   }
 
   .my-experience__company-mark--logo {
-    padding: 6px;
+    padding: 5px;
+  }
+
+  .my-experience__role-copy h3 {
+    font-size: 1.05rem;
+  }
+
+  .my-experience__detail {
+    padding: 16px 14px;
+    gap: 14px;
   }
 
   .my-experience__tools-panel {

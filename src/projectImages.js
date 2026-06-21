@@ -30,6 +30,7 @@ export const projectImages = {
   'laborlinkz-uiux-mobile': laborLinkz,
   'marians-pottery': mariansPottery,
   'network-homeowners': networkHomeowners,
+  'network-homeowners-uiux': networkHomeowners,
   'planto-uiux': planto,
   'plantpal-uiux': plantpal,
   'pro-assisting-uiux': proAssisting,

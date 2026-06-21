@@ -29,7 +29,10 @@ export default function ExperienceSection({ activeExperience, activeExperienceId
 
           <div className="my-experience__layout">
             <aside className="my-experience__timeline" aria-label="Experience timeline">
-              <h3>Timeline</h3>
+              <h3>
+                Timeline
+                <span className="my-experience__timeline-hint">Swipe to explore</span>
+              </h3>
               <ul>
                 {experienceRoles.map((role) => (
                   <li key={role.id}>
