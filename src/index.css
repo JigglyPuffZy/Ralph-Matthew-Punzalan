@@ -43,6 +43,14 @@ h6 {
   font-weight: 700;
 }
 
+p,
+li,
+label,
+figcaption,
+blockquote {
+  font-family: var(--font-body);
+}
+
 #root {
   min-height: 100vh;
   overflow-x: hidden;
