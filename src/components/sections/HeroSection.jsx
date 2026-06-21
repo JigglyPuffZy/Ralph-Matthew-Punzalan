@@ -52,6 +52,17 @@ export default function HeroSection({ heroRef, canvasRef, drawLineSvgRef, drawPa
           </div>
         </section>
       </main>
+
+      <a
+        aria-label="Scroll to About section"
+        className="hero-scroll-hint"
+        href="#about"
+      >
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 5v12" />
+          <path d="m7 12 5 5 5-5" />
+        </svg>
+      </a>
     </div>
   )
 }
