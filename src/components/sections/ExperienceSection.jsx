@@ -1,7 +1,7 @@
 import ExperienceCompanyMark from '../experience/ExperienceCompanyMark'
 import { experienceRoles } from '../../data/experience'
 import { experienceTechIcons } from '../../data/techIcons'
-import { portfolioUrl } from '../../data/portfolio'
+import { resumeDownloadName, resumePdfUrl } from '../../data/portfolio'
 import {
   getExperienceTechIcon,
   renderExperienceAchievementIcon,
@@ -48,7 +48,11 @@ export default function ExperienceSection({ activeExperience, activeExperienceId
                   </li>
                 ))}
               </ul>
-              <a className="my-experience__resume" href={portfolioUrl} target="_blank" rel="noreferrer">
+              <a
+                className="my-experience__resume"
+                download={resumeDownloadName}
+                href={resumePdfUrl}
+              >
                 <svg aria-hidden="true" viewBox="0 0 24 24">
                   <path d="M12 3v12" />
                   <path d="m7 10 5 5 5-5" />

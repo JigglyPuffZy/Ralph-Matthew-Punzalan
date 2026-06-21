@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { contactQuotes, emptyContactForm } from '../data/contact'
+import { sendContactEmailNotification } from '../lib/sendContactNotification'
 import { isSupabaseConfigured, supabase } from '../lib/supabase'
 
 export function useContactForm() {
@@ -30,27 +31,28 @@ export function useContactForm() {
     event.preventDefault()
     setSubmitStatus(null)
 
-    const { name, email, subject, message } = contactForm
+    const payload = {
+      email: contactForm.email.trim(),
+      message: contactForm.message.trim(),
+      name: contactForm.name.trim(),
+      subject: contactForm.subject.trim(),
+    }
 
     if (!isSupabaseConfigured) {
-      const mailSubject = encodeURIComponent(subject || 'Portfolio Contact')
-      const mailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
+      const mailSubject = encodeURIComponent(payload.subject || 'Portfolio Contact')
+      const mailBody = encodeURIComponent(
+        `Name: ${payload.name}\nEmail: ${payload.email}\n\n${payload.message}`,
+      )
       window.location.href = `mailto:ralphmatthewpunzalan23@gmail.com?subject=${mailSubject}&body=${mailBody}`
       return
     }
 
     setIsSubmitting(true)
 
-    const { error } = await supabase.from('contact_messages').insert({
-      email: email.trim(),
-      message: message.trim(),
-      name: name.trim(),
-      subject: subject.trim(),
-    })
-
-    setIsSubmitting(false)
+    const { error } = await supabase.from('contact_messages').insert(payload)
 
     if (error) {
+      setIsSubmitting(false)
       setSubmitStatus({
         text: 'Something went wrong. Please try again or email me directly.',
         type: 'error',
@@ -58,9 +60,29 @@ export function useContactForm() {
       return
     }
 
+    const emailResult = await sendContactEmailNotification(payload)
+
+    setIsSubmitting(false)
     setContactForm(emptyContactForm)
+
+    if (emailResult.delivered) {
+      setSubmitStatus({
+        text: 'Message sent. I will get back to you soon.',
+        type: 'success',
+      })
+      return
+    }
+
+    if (emailResult.reason === 'missing_key') {
+      setSubmitStatus({
+        text: 'Message saved. Email alerts are not configured yet on the server.',
+        type: 'success',
+      })
+      return
+    }
+
     setSubmitStatus({
-      text: 'Message sent. I will get back to you soon.',
+      text: 'Message saved, but the email alert failed. I will check Supabase for your message.',
       type: 'success',
     })
   }

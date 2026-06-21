@@ -333,8 +333,8 @@ html {
   display: flex;
   align-items: center;
   width: min(1080px, calc(100% - 40px));
-  min-height: 72px;
-  padding: 0 12px 0 16px;
+  min-height: 64px;
+  padding: 0 10px 0 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   background: rgba(9, 9, 14, 0.94);
@@ -344,6 +344,7 @@ html {
   backdrop-filter: blur(18px) saturate(140%);
   font-family: var(--font-body);
   transform: translateX(-50%);
+  overflow: visible;
 }
 
 .glass-navbar::before {
@@ -358,6 +359,7 @@ html {
   align-items: center;
   gap: 12px;
   min-width: 0;
+  overflow: visible;
 }
 
 .glass-navbar__brand {
@@ -366,24 +368,38 @@ html {
   gap: 10px;
   flex-shrink: 0;
   min-width: 0;
-  padding: 4px 0;
+  padding: 0;
   color: inherit;
   text-decoration: none;
   transition: opacity 180ms ease;
+  overflow: visible;
 }
 
 .glass-navbar__brand:hover {
   opacity: 0.92;
 }
 
+.glass-navbar__brand--desktop {
+  position: relative;
+  z-index: 2;
+  margin-right: 4px;
+}
+
+.glass-navbar__brand--desktop .glass-navbar__brand-logo {
+  height: 128px;
+  max-width: none;
+  width: auto;
+  margin: -32px 0;
+}
+
 .glass-navbar__brand-logo {
   display: block;
   width: auto;
-  height: 52px;
-  max-width: 190px;
+  height: 128px;
+  max-width: none;
   object-fit: contain;
   object-position: left center;
-  filter: drop-shadow(0 2px 12px rgba(124, 58, 237, 0.42));
+  filter: drop-shadow(0 4px 20px rgba(124, 58, 237, 0.5));
   transition:
     filter 200ms ease,
     transform 200ms ease;
@@ -587,9 +603,10 @@ html {
     padding: 0 8px 0 12px;
   }
 
+  .glass-navbar__brand--desktop .glass-navbar__brand-logo,
   .glass-navbar__brand-logo {
-    height: 44px;
-    max-width: 162px;
+    height: 108px;
+    margin: -26px 0;
   }
 
   .glass-navbar__item {
