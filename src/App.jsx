@@ -1,7 +1,9 @@
 import './App.css'
 import './contact-us.css'
+import './footer.css'
 import './responsive.css'
 
+import Footer from './components/layout/Footer'
 import Navbar from './components/layout/Navbar'
 import AboutSection from './components/sections/AboutSection'
 import ContactSection from './components/sections/ContactSection'
@@ -58,6 +60,8 @@ function App() {
         submitStatus={contact.submitStatus}
         updateContactField={contact.updateContactField}
       />
+
+      <Footer />
     </div>
   )
 }
