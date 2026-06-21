@@ -39,11 +39,10 @@ export function useContactForm() {
     }
 
     if (!isSupabaseConfigured) {
-      const mailSubject = encodeURIComponent(payload.subject || 'Portfolio Contact')
-      const mailBody = encodeURIComponent(
-        `Name: ${payload.name}\nEmail: ${payload.email}\n\n${payload.message}`,
-      )
-      window.location.href = `mailto:ralphmatthewpunzalan23@gmail.com?subject=${mailSubject}&body=${mailBody}`
+      setSubmitStatus({
+        text: 'Contact form is not configured yet. Restart the dev server after updating .env.local.',
+        type: 'error',
+      })
       return
     }
 
