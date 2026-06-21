@@ -1,6 +1,5 @@
 import brandLogo from '../../assets/logo ralph.png'
 import { primaryNavItems } from '../../data/navigation'
-import { renderPrimaryNavIcon } from '../../utils/icons/navIcons'
 
 function NavbarBrand({ className, onNavigate }) {
   return (
@@ -77,8 +76,10 @@ export default function Navbar({ navOpen, setNavOpen, closeNav, activeNavId }) {
                 href={item.href}
                 onClick={closeNav}
               >
-                {renderPrimaryNavIcon(item.id)}
-                <span>{item.label}</span>
+                <span className="glass-navbar__label glass-navbar__label--full">{item.label}</span>
+                <span className="glass-navbar__label glass-navbar__label--short">
+                  {item.shortLabel}
+                </span>
               </a>
             ))}
           </div>
@@ -88,17 +89,7 @@ export default function Navbar({ navOpen, setNavOpen, closeNav, activeNavId }) {
             href="#contact"
             onClick={closeNav}
           >
-            <span>Contact</span>
-            <svg aria-hidden="true" className="glass-navbar__connect-icon" viewBox="0 0 24 24">
-              <path
-                d="M7 17L17 7M17 7H9M17 7v8"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.75"
-              />
-            </svg>
+            Contact
           </a>
         </div>
       </nav>

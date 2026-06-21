@@ -790,26 +790,23 @@
     flex: 1;
     flex-direction: column;
     align-items: stretch;
-    gap: 4px;
+    gap: 6px;
     width: 100%;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
   }
 
   .glass-navbar__item {
-    flex-direction: row;
     justify-content: flex-start;
-    gap: 12px;
     min-width: 0;
-    min-height: 48px;
-    padding: 12px 14px;
-    border-radius: 8px;
-    font-size: 0.86rem;
+    min-height: 46px;
+    padding: 0 16px;
+    border-radius: 9px;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.01em;
-    text-transform: none;
     color: rgba(228, 228, 231, 0.72);
   }
 
@@ -818,23 +815,21 @@
   }
 
   .glass-navbar__item.is-active {
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(124, 58, 237, 0.18);
     color: #ffffff;
-    box-shadow: inset 3px 0 0 #7c3aed;
+    box-shadow: inset 3px 0 0 #a78bfa;
   }
 
   .glass-navbar__item + .glass-navbar__item::before {
     display: none;
   }
 
-  .glass-navbar__item span {
+  .glass-navbar__label--full {
     display: inline;
   }
 
-  .glass-navbar__icon {
-    width: 18px;
-    height: 18px;
-    opacity: 0.85;
+  .glass-navbar__label--short {
+    display: none;
   }
 
   .glass-navbar__connect {
@@ -843,11 +838,8 @@
     justify-content: center;
     margin-top: auto;
     padding: 0 18px;
-    border-radius: 8px;
-  }
-
-  .glass-navbar__connect span {
-    display: inline;
+    border-radius: 10px;
+    font-size: 0.875rem;
   }
 
   .glass-navbar__backdrop {

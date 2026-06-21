@@ -1,8 +1,8 @@
 export const primaryNavItems = [
-  { id: 'about', href: '#about', label: 'About' },
-  { id: 'workflow', href: '#workflow', label: 'Tools & Workflow' },
-  { id: 'projects', href: '#projects', label: 'Projects' },
-  { id: 'experience', href: '#experience', label: 'Experience' },
+  { id: 'about', href: '#about', label: 'About', shortLabel: 'About' },
+  { id: 'workflow', href: '#workflow', label: 'Tools & Workflow', shortLabel: 'Workflow' },
+  { id: 'projects', href: '#projects', label: 'Projects', shortLabel: 'Projects' },
+  { id: 'experience', href: '#experience', label: 'Experience', shortLabel: 'Experience' },
 ]
 
 export const primaryNavScrollSections = [
