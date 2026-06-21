@@ -27,11 +27,11 @@ export const experienceRoles = [
     location: 'Philippines',
     period: 'Jan 2026 – Jun 2026',
     responsibilities: [
-      'Develop web applications with React.js, Next.js, and TypeScript.',
-      'Build responsive, accessible interfaces for desktop and mobile.',
-      'Create reusable components and maintainable front-end architecture.',
-      'Integrate REST APIs and third-party services into product workflows.',
-      'Support testing, debugging, deployment, and code reviews.',
+      'Turn product ideas and designs into real React + Next.js apps — the kind people actually enjoy clicking through.',
+      'Build interfaces that feel smooth on any screen, not just “technically responsive.”',
+      'Create reusable components so the team ships faster without rebuilding the same UI twice.',
+      'Wire up APIs and third-party tools so the front end talks cleanly to the backend.',
+      'Jump in on testing, bug fixes, deploys, and code reviews — shipping is a team sport.',
     ],
     summary:
       'Front-end developer building scalable web applications with React, Next.js, TypeScript, and Tailwind CSS for cross-functional product teams.',
@@ -66,10 +66,10 @@ export const experienceRoles = [
     location: 'Region II, Philippines',
     period: 'Mar 2026 – Jun 2026',
     responsibilities: [
-      'Develop the CEST Dashboard for regional science initiatives.',
-      'Build interactive dashboards and data visualizations.',
-      'Gather requirements and validate workflows with stakeholders.',
-      'Assist with testing, deployment, and release documentation.',
+      'Built the CEST Dashboard so DOST teams could track science programs without drowning in spreadsheets.',
+      'Designed dashboards and charts that make complex data easy to read at a glance.',
+      'Sat down with stakeholders, listened to how they actually work, and shaped the product around that.',
+      'Helped get features across the finish line — testing, deployment, and docs included.',
     ],
     summary:
       'Web developer supporting DOST Region II with dashboard development, data visualization, and product delivery for public science programs.',
@@ -104,10 +104,10 @@ export const experienceRoles = [
     location: 'Remote',
     period: 'Nov 2024 – Feb 2026',
     responsibilities: [
-      'Design the Brioray platform in Figma and translate it into React interfaces.',
-      'Develop responsive front-end experiences with Tailwind CSS.',
-      'Align UI decisions with business goals and user needs.',
-      'Maintain accessibility, consistency, and visual quality across devices.',
+      'Owned Brioray from Figma mockup to live React UI — design and code, start to finish.',
+      'Crafted responsive layouts with Tailwind so the product looks sharp on every device.',
+      'Balanced what users need with what the business wants — good UX isn’t just pretty screens.',
+      'Kept the interface consistent, accessible, and on-brand across the whole platform.',
     ],
     summary:
       'Front-end developer and UI/UX designer leading product interface work from Figma design through React implementation.',
@@ -142,9 +142,9 @@ export const experienceRoles = [
     location: 'Philippines',
     period: 'Aug 2024 – Nov 2024',
     responsibilities: [
-      'Manage office documentation, records, and administrative coordination.',
-      'Design promotional materials for community and youth programs.',
-      'Plan and publish social media campaign assets.',
+      'Kept the office running — files organized, records easy to find, day-to-day stuff handled.',
+      'Designed eye-catching visuals for SK and barangay programs that people actually stopped to read.',
+      'Planned and posted social content that got the community talking (not just scrolling past).',
     ],
     summary:
       'Administrative and creative support role handling documentation, campaign design, and social media content for community programs.',
@@ -179,9 +179,9 @@ export const experienceRoles = [
     location: 'Sto. Tomas, Isabela',
     period: 'Jun 2024 – Aug 2024',
     responsibilities: [
-      'Redesign internal system interfaces for clearer staff workflows.',
-      'Create visual assets for government communications.',
-      'Manage social media content and campaign materials.',
+      'Redesigned clunky internal screens so staff could get their work done without getting lost.',
+      'Created visuals and assets for municipal announcements and public-facing campaigns.',
+      'Ran social media — content, graphics, and keeping the LGU’s online presence active.',
     ],
     summary:
       'UI/UX and communications role focused on improving internal system usability and supporting municipal digital content.',
@@ -216,9 +216,9 @@ export const experienceRoles = [
     location: 'Philippines',
     period: 'Jun 2023 – May 2024',
     responsibilities: [
-      'Design and build responsive websites for client and personal projects.',
-      'Create UI/UX prototypes and interface layouts in Figma.',
-      'Implement front-end experiences with HTML, CSS, JavaScript, and React.',
+      'Designed and built websites for clients — from first wireframe to launch day.',
+      'Sketched UI flows in Figma until the experience felt right, then coded them for real.',
+      'Stacked up hands-on React, HTML, CSS, and JavaScript skills that carried into every role after.',
     ],
     summary:
       'Freelance front-end and UI/UX work delivering responsive websites, interface design, and client-facing digital products.',
