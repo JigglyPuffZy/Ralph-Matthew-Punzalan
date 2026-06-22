@@ -1,3 +1,5 @@
+import { icon } from '../utils/simpleIcon'
+
 export const gridConfig = {
   clickStrength: 0.32,
   dotSize: 1.35,
@@ -13,31 +15,31 @@ export const techLogos = [
   {
     className: 'tech-logo--react',
     name: 'React',
-    src: 'https://cdn.simpleicons.org/react/ffffff',
+    src: icon('react', 'ffffff'),
   },
   {
     className: 'tech-logo--javascript',
     name: 'JavaScript',
-    src: 'https://cdn.simpleicons.org/javascript/ffffff',
+    src: icon('javascript', 'ffffff'),
   },
   {
     className: 'tech-logo--css',
     name: 'CSS',
-    src: 'https://cdn.simpleicons.org/css/ffffff',
+    src: icon('css', 'ffffff'),
   },
   {
     className: 'tech-logo--tailwind',
     name: 'Tailwind CSS',
-    src: 'https://cdn.simpleicons.org/tailwindcss/ffffff',
+    src: icon('tailwindcss', 'ffffff'),
   },
   {
     className: 'tech-logo--vite',
     name: 'Vite',
-    src: 'https://cdn.simpleicons.org/vite/ffffff',
+    src: icon('vite', 'ffffff'),
   },
   {
     className: 'tech-logo--html',
     name: 'HTML',
-    src: 'https://cdn.simpleicons.org/html5/ffffff',
+    src: icon('html5', 'ffffff'),
   },
 ]
