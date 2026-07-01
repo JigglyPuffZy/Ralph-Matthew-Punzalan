@@ -1,7 +1,6 @@
 import './App.css'
 import './contact-us.css'
 import './footer.css'
-import './navbar.css'
 import './responsive.css'
 
 import Footer from './components/layout/Footer'

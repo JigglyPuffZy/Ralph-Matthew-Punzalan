@@ -1,5 +1,20 @@
-import brandMark from '../../assets/logo-navbar.svg'
+import brandLogo from '../../assets/logo ralph.png'
 import { primaryNavItems } from '../../data/navigation'
+
+function NavbarBrand({ className, onNavigate }) {
+  return (
+    <a className={className} href="#home" onClick={onNavigate}>
+      <img
+        alt="R4lph"
+        className="glass-navbar__brand-logo"
+        decoding="async"
+        height={128}
+        src={brandLogo}
+        width={460}
+      />
+    </a>
+  )
+}
 
 export default function Navbar({ navOpen, setNavOpen, closeNav, activeNavId }) {
   return (
@@ -7,153 +22,77 @@ export default function Navbar({ navOpen, setNavOpen, closeNav, activeNavId }) {
       {navOpen ? (
         <button
           type="button"
-          className="site-header__backdrop"
+          className="glass-navbar__backdrop"
           aria-label="Close menu"
           onClick={closeNav}
         />
       ) : null}
 
-      <header className={`site-header${navOpen ? ' is-open' : ''}`}>
-        <div className="site-header__accent" aria-hidden="true" />
+      <nav
+        className={`glass-navbar${navOpen ? ' is-open' : ''}`}
+        aria-label="Primary navigation"
+      >
+        <NavbarBrand className="glass-navbar__brand glass-navbar__brand--mobile" onNavigate={closeNav} />
 
-        <div className="site-header__bar">
-          <div className="site-header__inner">
-            <a className="site-header__brand" href="#home" onClick={closeNav}>
-              <img
-                alt=""
-                className="site-header__brand-mark"
-                decoding="async"
-                height={38}
-                src={brandMark}
-                width={82}
-              />
-              <span className="site-header__brand-divider" aria-hidden="true" />
-              <span className="site-header__brand-copy">
-                <strong>R4lph</strong>
-                <small>Front-End & UI/UX</small>
-              </span>
-            </a>
-
-            <nav className="site-header__nav" aria-label="Primary navigation">
-              <div className="site-header__nav-track" id="primary-nav-links">
-                {primaryNavItems.map((item, index) => (
-                  <a
-                    key={item.id}
-                    className={`site-header__link${activeNavId === item.id ? ' is-active' : ''}`}
-                    href={item.href}
-                    onClick={closeNav}
-                  >
-                    <span className="site-header__link-index">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <span className="site-header__link-label site-header__link-label--full">
-                      {item.label}
-                    </span>
-                    <span className="site-header__link-label site-header__link-label--short">
-                      {item.shortLabel}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            </nav>
-
-            <div className="site-header__actions">
-              <span className="site-header__status">
-                <span className="site-header__status-dot" aria-hidden="true" />
-                Open to work
-              </span>
-              <a
-                className={`site-header__cta${activeNavId === 'contact' ? ' is-active' : ''}`}
-                href="#contact"
-                onClick={closeNav}
-              >
-                <span>Let&apos;s talk</span>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M7 17 17 7" fill="none" stroke="currentColor" strokeWidth="1.75" />
-                  <path d="M9 7h8v8" fill="none" stroke="currentColor" strokeWidth="1.75" />
-                </svg>
-              </a>
-            </div>
-
-            <button
-              type="button"
-              className="site-header__toggle"
-              aria-expanded={navOpen}
-              aria-controls="site-header-mobile-menu"
-              onClick={() => setNavOpen((open) => !open)}
-            >
-              <span className="site-header__toggle-lines" aria-hidden="true">
-                <span />
-                <span />
-              </span>
-              <span className="sr-only">{navOpen ? 'Close menu' : 'Open menu'}</span>
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="site-header__mobile"
-          id="site-header-mobile-menu"
-          aria-hidden={!navOpen}
+        <button
+          type="button"
+          className="glass-navbar__menu"
+          aria-expanded={navOpen}
+          aria-controls="primary-nav-links"
+          onClick={() => setNavOpen((open) => !open)}
         >
-          <div className="site-header__mobile-glow" aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span className="sr-only">{navOpen ? 'Close menu' : 'Open menu'}</span>
+        </button>
 
-          <div className="site-header__mobile-head">
-            <a className="site-header__brand site-header__brand--mobile" href="#home" onClick={closeNav}>
-              <img alt="" className="site-header__brand-mark" height={38} src={brandMark} width={82} />
-              <span className="site-header__brand-copy">
-                <strong>R4lph</strong>
-                <small>Portfolio</small>
-              </span>
-            </a>
+        <div className="glass-navbar__inner">
+          <div className="glass-navbar__sidebar-head">
+            <NavbarBrand
+              className="glass-navbar__brand glass-navbar__brand--sidebar"
+              onNavigate={closeNav}
+            />
             <button
               type="button"
-              className="site-header__mobile-close"
+              className="glass-navbar__sidebar-close"
               aria-label="Close menu"
               onClick={closeNav}
             >
               <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" strokeWidth="1.75" />
+                <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
               </svg>
             </button>
           </div>
 
-          <nav className="site-header__mobile-nav" aria-label="Mobile navigation">
-            {primaryNavItems.map((item, index) => (
+          <NavbarBrand
+            className="glass-navbar__brand glass-navbar__brand--desktop"
+            onNavigate={closeNav}
+          />
+
+          <div className="glass-navbar__links" id="primary-nav-links">
+            {primaryNavItems.map((item) => (
               <a
                 key={item.id}
-                className={`site-header__mobile-link${activeNavId === item.id ? ' is-active' : ''}`}
+                className={`glass-navbar__item${activeNavId === item.id ? ' is-active' : ''}`}
                 href={item.href}
                 onClick={closeNav}
-                style={{ '--nav-delay': `${index * 60}ms` }}
               >
-                <span className="site-header__mobile-index">
-                  {String(index + 1).padStart(2, '0')}
+                <span className="glass-navbar__label glass-navbar__label--full">{item.label}</span>
+                <span className="glass-navbar__label glass-navbar__label--short">
+                  {item.shortLabel}
                 </span>
-                <span className="site-header__mobile-label">{item.label}</span>
               </a>
             ))}
-          </nav>
-
-          <div className="site-header__mobile-foot">
-            <span className="site-header__status site-header__status--mobile">
-              <span className="site-header__status-dot" aria-hidden="true" />
-              Available for freelance & full-time roles
-            </span>
-            <a
-              className="site-header__mobile-cta"
-              href="#contact"
-              onClick={closeNav}
-            >
-              Start a project
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M5 12h14" fill="none" stroke="currentColor" strokeWidth="1.75" />
-                <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" strokeWidth="1.75" />
-              </svg>
-            </a>
           </div>
+
+          <a
+            className={`glass-navbar__connect${activeNavId === 'contact' ? ' is-active' : ''}`}
+            href="#contact"
+            onClick={closeNav}
+          >
+            Contact
+          </a>
         </div>
-      </header>
+      </nav>
     </>
   )
 }

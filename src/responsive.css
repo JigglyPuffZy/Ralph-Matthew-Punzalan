@@ -12,6 +12,14 @@
   border: 0;
 }
 
+.glass-navbar__menu {
+  display: none;
+}
+
+.glass-navbar__backdrop {
+  display: none;
+}
+
 @media (max-width: 1180px) {
   .featured-work__showcase {
     grid-template-columns: 1fr;
@@ -608,10 +616,258 @@
     flex: 0 0 min(84%, 260px);
   }
 
+  .glass-navbar {
+    top: max(14px, env(safe-area-inset-top));
+    right: max(14px, env(safe-area-inset-right));
+    left: max(14px, env(safe-area-inset-left));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    transform: none;
+  }
+
+  .glass-navbar__brand--mobile {
+    display: none;
+  }
+
+  .glass-navbar::before {
+    display: none;
+  }
+
+  .glass-navbar__menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(10, 10, 16, 0.96);
+    color: #f4f4f5;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 8px 24px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(14px);
+  }
+
+  .glass-navbar__menu span:not(.sr-only) {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    transition: transform 200ms ease, opacity 200ms ease;
+  }
+
+  .glass-navbar__menu span:not(.sr-only)::before,
+  .glass-navbar__menu span:not(.sr-only)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    transition: transform 200ms ease, top 200ms ease;
+  }
+
+  .glass-navbar__menu span:not(.sr-only)::before {
+    top: -6px;
+  }
+
+  .glass-navbar__menu span:not(.sr-only)::after {
+    top: 6px;
+  }
+
+  .glass-navbar.is-open .glass-navbar__menu span:not(.sr-only) {
+    background: transparent;
+  }
+
+  .glass-navbar.is-open .glass-navbar__menu span:not(.sr-only)::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .glass-navbar.is-open .glass-navbar__menu span:not(.sr-only)::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .glass-navbar__inner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    width: min(320px, 88vw);
+    height: 100dvh;
+    max-height: 100dvh;
+    padding:
+      max(18px, env(safe-area-inset-top))
+      max(18px, env(safe-area-inset-right))
+      max(24px, env(safe-area-inset-bottom))
+      20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0;
+    background: linear-gradient(180deg, rgba(11, 11, 17, 0.99), rgba(7, 7, 12, 0.99));
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px) saturate(130%);
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  .glass-navbar.is-open .glass-navbar__inner {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .glass-navbar__sidebar-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-navbar__brand--desktop {
+    display: none;
+  }
+
+  .glass-navbar__brand--sidebar {
+    display: inline-flex;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .glass-navbar__brand--sidebar .glass-navbar__brand-logo {
+    height: 72px;
+    max-width: none;
+    margin: -12px 0;
+  }
+
+  .glass-navbar__sidebar-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #f4f4f5;
+    cursor: pointer;
+  }
+
+  .glass-navbar__sidebar-close svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .glass-navbar__links {
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    width: 100%;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .glass-navbar__item {
+    justify-content: flex-start;
+    min-width: 0;
+    min-height: 46px;
+    padding: 0 16px;
+    border-radius: 9px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: rgba(228, 228, 231, 0.72);
+  }
+
+  .glass-navbar__item::after {
+    display: none;
+  }
+
+  .glass-navbar__item.is-active {
+    background: rgba(124, 58, 237, 0.18);
+    color: #ffffff;
+    box-shadow: inset 3px 0 0 #a78bfa;
+  }
+
+  .glass-navbar__item + .glass-navbar__item::before {
+    display: none;
+  }
+
+  .glass-navbar__label--full {
+    display: inline;
+  }
+
+  .glass-navbar__label--short {
+    display: none;
+  }
+
+  .glass-navbar__connect {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    margin-top: auto;
+    padding: 0 18px;
+    border-radius: 10px;
+    font-size: 0.875rem;
+  }
+
+  .glass-navbar__backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    border: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+    animation: sidebar-backdrop-in 220ms ease;
+  }
+
+  @keyframes sidebar-backdrop-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
   .hero-content {
     width: 100%;
     box-sizing: border-box;
-    padding-top: max(84px, calc(env(safe-area-inset-top) + 64px));
+    padding-top: max(96px, calc(env(safe-area-inset-top) + 72px));
     padding-right: max(20px, env(safe-area-inset-right));
     padding-bottom: 48px;
     padding-left: max(20px, env(safe-area-inset-left));
