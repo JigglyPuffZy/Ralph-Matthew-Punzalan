@@ -6,8 +6,7 @@ export const workflowSteps = [
     description: 'I review the brief, define the scope, and align the project goals before design or development begins.',
     icon: (
       <>
-        <path d="M5 12h14" />
-        <path d="m13 6 6 6-6 6" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15M14.5 6l6 6-6 6" />
       </>
     ),
     step: '01',
@@ -19,10 +18,8 @@ export const workflowSteps = [
     description: 'I study the audience, user needs, and key pain points to shape a solution with purpose.',
     icon: (
       <>
-        <circle cx="11" cy="11" r="5" />
-        <path d="m15 15 4 4" />
-        <path d="M11 8v6" />
-        <path d="M8 11h6" />
+        <circle cx="11" cy="11" r="5.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="m15.5 15.5 4 4M11 7.5v7M7.5 11h7" />
       </>
     ),
     step: '02',
@@ -34,10 +31,7 @@ export const workflowSteps = [
     description: 'I turn the goals into a clear roadmap with priorities, structure, and next actions.',
     icon: (
       <>
-        <path d="M5 6h14" />
-        <path d="M5 12h10" />
-        <path d="M5 18h6" />
-        <path d="m15 17 2 2 4-5" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M4.5 5.5h15M4.5 12h10.5M4.5 18.5h6.5M15.5 17l2.5 2.5 4.5-5.5" />
       </>
     ),
     step: '03',
@@ -49,10 +43,8 @@ export const workflowSteps = [
     description: 'I design clean, intuitive screens focused on usability, accessibility, and visual polish.',
     icon: (
       <>
-        <rect x="5" y="5" width="14" height="14" rx="3" />
-        <path d="M9 9h6" />
-        <path d="M9 13h3" />
-        <path d="M15 15.5h.01" />
+        <rect x="4.5" y="4.5" width="15" height="15" rx="3.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M8.5 9h7M8.5 13h4M15.5 15.8h.5" />
       </>
     ),
     step: '04',
@@ -64,9 +56,7 @@ export const workflowSteps = [
     description: 'I develop a responsive, functional product with clean code and smooth interactions.',
     icon: (
       <>
-        <path d="m9 8-4 4 4 4" />
-        <path d="m15 8 4 4-4 4" />
-        <path d="m13 6-2 12" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M8.5 8.5 4.5 12l4 4M15.5 8.5l4 3.5-4 4M14 5l-4 14" />
       </>
     ),
     step: '05',
@@ -78,8 +68,7 @@ export const workflowSteps = [
     description: 'I test, refine, and improve the experience to catch issues before the final handoff.',
     icon: (
       <>
-        <path d="M12 5 5 8v5c0 4 3 6 7 7 4-1 7-3 7-7V8l-7-3Z" />
-        <path d="m9 12 2 2 4-5" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M12 4.5 4.5 8v5.5c0 4.2 3.2 6.3 7.5 7.5 4.3-1.2 7.5-3.3 7.5-7.5V8l-7.5-3.5ZM8.5 12.5l2.5 2.5 4.5-5.5" />
       </>
     ),
     step: '06',
@@ -91,10 +80,9 @@ export const workflowSteps = [
     description: 'I prepare the final build, deploy it properly, and make sure everything is ready to go live.',
     icon: (
       <>
-        <path d="M12 4c3 2 5 5 5 9l-5 7-5-7c0-4 2-7 5-9Z" />
-        <circle cx="12" cy="11" r="2" />
-        <path d="M8 17 5 20" />
-        <path d="m16 17 3 3" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M12 3.5c3.2 2 5.2 5.2 5.2 9.5l-5.2 7.5-5.2-7.5c0-4.3 2-7.5 5.2-9.5Z" />
+        <circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M7.5 17.5 4.5 20.5M16.5 17.5l3 3" />
       </>
     ),
     step: '07',

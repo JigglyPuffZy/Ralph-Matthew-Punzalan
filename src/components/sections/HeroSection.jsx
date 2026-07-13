@@ -58,9 +58,9 @@ export default function HeroSection({ heroRef, canvasRef, drawLineSvgRef, drawPa
         className="hero-scroll-hint"
         href="#about"
       >
-        <svg aria-hidden="true" viewBox="0 0 24 24">
-          <path d="M12 5v12" />
-          <path d="m7 12 5 5 5-5" />
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 4.5v14" />
+          <path d="m6.5 13 5.5 5.5 5.5-5.5" />
         </svg>
       </a>
     </div>

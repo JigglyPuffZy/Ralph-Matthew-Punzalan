@@ -20,10 +20,9 @@ export default function AboutSection() {
           <div className="profile-specialties" aria-label="Core specialties">
             <span>
               <i>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <rect x="5" y="5" width="14" height="14" rx="3" />
-                  <path d="M9 9h6" />
-                  <path d="M9 13h4" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="4.5" y="4.5" width="15" height="15" rx="3.5" />
+                  <path d="M8.5 9h7M8.5 13h5" />
                 </svg>
               </i>
               <strong>Interface Design</strong>
@@ -31,10 +30,8 @@ export default function AboutSection() {
             </span>
             <span>
               <i>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="m9 8-4 4 4 4" />
-                  <path d="m15 8 4 4-4 4" />
-                  <path d="m13 6-2 12" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m8.5 8-3.5 4 3.5 4M15.5 8l3.5 4-3.5 4M13.5 5.5l-3 13" />
                 </svg>
               </i>
               <strong>Front-End Build</strong>
@@ -42,8 +39,8 @@ export default function AboutSection() {
             </span>
             <span>
               <i>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M12 3 9.8 8.2 4 9l4.2 3.8L7 18.5 12 15.6l5 2.9-1.2-5.7L20 9l-5.8-.8L12 3Z" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2.5 9.5 8.2 3 9.1l4.5 4.2-1.2 6L12 16.3l5.7 3-1.2-6 4.5-4.2-6.5-.9L12 2.5Z" />
                 </svg>
               </i>
               <strong>UX Polish</strong>
@@ -74,10 +71,8 @@ export default function AboutSection() {
           <div className="dashboard-stats">
             <article>
               <i>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="m8 9-4 3 4 3" />
-                  <path d="m16 9 4 3-4 3" />
-                  <path d="m14 5-4 14" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M8 8.5 4.5 12 8 15.5M16 8.5l3.5 3.5-3.5 3.5M14 5l-4 14" />
                 </svg>
               </i>
               <strong>3+</strong>
@@ -85,10 +80,9 @@ export default function AboutSection() {
             </article>
             <article>
               <i>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <rect x="4" y="5" width="16" height="14" rx="3" />
-                  <path d="M8 9h8" />
-                  <path d="M8 13h5" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3.5" y="4.5" width="17" height="15" rx="3.5" />
+                  <path d="M7.5 9h9M7.5 13h6" />
                 </svg>
               </i>
               <strong>20+</strong>
@@ -96,9 +90,9 @@ export default function AboutSection() {
             </article>
             <article>
               <i>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M12 5 5 8v5c0 4 3 6 7 7 4-1 7-3 7-7V8l-7-3Z" />
-                  <path d="m9 12 2 2 4-5" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 4.5 4.5 8v5.5c0 4.2 3.2 6.3 7.5 7.5 4.3-1.2 7.5-3.3 7.5-7.5V8l-7.5-3.5Z" />
+                  <path d="m8.5 12.5 2.5 2.5 4.5-5.5" />
                 </svg>
               </i>
               <strong>10+</strong>
@@ -109,10 +103,9 @@ export default function AboutSection() {
           <dl className="dashboard-info">
             <div>
               <dt>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <rect x="4" y="5" width="16" height="14" rx="3" />
-                  <path d="M8 10h8" />
-                  <path d="M8 14h5" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3.5" y="4.5" width="17" height="15" rx="3.5" />
+                  <path d="M7.5 10h9M7.5 14h6" />
                 </svg>
                 Focus
               </dt>
@@ -120,9 +113,9 @@ export default function AboutSection() {
             </div>
             <div>
               <dt>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M12 21s7-5.4 7-12a7 7 0 1 0-14 0c0 6.6 7 12 7 12Z" />
-                  <circle cx="12" cy="9" r="2.5" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 21.5s7.5-5.5 7.5-12.5a7.5 7.5 0 1 0-15 0c0 7 7.5 12.5 7.5 12.5Z" />
+                  <circle cx="12" cy="9" r="2.8" />
                 </svg>
                 Location
               </dt>
@@ -130,9 +123,9 @@ export default function AboutSection() {
             </div>
             <div>
               <dt>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <path d="M12 5 5 8v5c0 4 3 6 7 7 4-1 7-3 7-7V8l-7-3Z" />
-                  <path d="m9 12 2 2 4-5" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 4.5 4.5 8v5.5c0 4.2 3.2 6.3 7.5 7.5 4.3-1.2 7.5-3.3 7.5-7.5V8l-7.5-3.5Z" />
+                  <path d="m8.5 12.5 2.5 2.5 4.5-5.5" />
                 </svg>
                 Availability
               </dt>
@@ -140,9 +133,9 @@ export default function AboutSection() {
             </div>
             <div>
               <dt>
-                <svg aria-hidden="true" viewBox="0 0 24 24">
-                  <rect x="4" y="6" width="16" height="12" rx="2" />
-                  <path d="m5 8 7 5 7-5" />
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" />
+                  <path d="m4.5 7.5 7.5 5.5 7.5-5.5" />
                 </svg>
                 Email
               </dt>
@@ -157,10 +150,10 @@ export default function AboutSection() {
       <div className="about-dashboard__bottom">
         <section className="dashboard-panel dashboard-panel--approach" id="workflow">
           <h3>
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M6 6h.01" />
-              <path d="M18 18h.01" />
-              <path d="M8 6h4a4 4 0 0 1 0 8h-1a4 4 0 0 0 0 8h5" />
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="6" cy="6" r="1.2" />
+              <circle cx="18" cy="18" r="1.2" />
+              <path d="M8.5 6.5h3a5 5 0 0 1 0 10h-1a5 5 0 0 0 0 10h5" />
             </svg>
             Project Workflow
           </h3>
@@ -234,10 +227,8 @@ export default function AboutSection() {
 
         <section className="dashboard-panel dashboard-panel--tools" id="tools">
           <h3>
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="m8 9-4 3 4 3" />
-              <path d="m16 9 4 3-4 3" />
-              <path d="m14 5-4 14" />
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M8 8.5 4.5 12 8 15.5M16 8.5l3.5 3.5-3.5 3.5M14 5l-4 14" />
             </svg>
             Technologies & Tools
           </h3>

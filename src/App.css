@@ -464,12 +464,8 @@ html {
   flex: 1;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 8px;
   min-width: 0;
-  padding: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 11px;
-  background: rgba(255, 255, 255, 0.025);
 }
 
 .glass-navbar__item {
@@ -481,8 +477,8 @@ html {
   min-height: 36px;
   padding: 8px 14px;
   border: 0;
-  border-radius: 8px;
-  color: rgba(228, 228, 231, 0.58);
+  border-radius: 0;
+  color: rgba(228, 228, 231, 0.62);
   font-family: var(--font-body);
   font-size: 0.8125rem;
   font-weight: 600;
@@ -490,10 +486,7 @@ html {
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
-  transition:
-    color 180ms ease,
-    background 180ms ease,
-    box-shadow 180ms ease;
+  transition: color 180ms ease;
 }
 
 .glass-navbar__item + .glass-navbar__item::before {
@@ -503,13 +496,12 @@ html {
 .glass-navbar__item::after {
   content: '';
   position: absolute;
-  bottom: 5px;
+  bottom: 4px;
   left: 50%;
   width: 0;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, transparent, #c4b5fd, transparent);
-  box-shadow: 0 0 10px rgba(167, 139, 250, 0.45);
+  background: #a78bfa;
   transform: translateX(-50%);
   transition: width 200ms ease;
 }
@@ -520,17 +512,14 @@ html {
 
 .glass-navbar__item:hover {
   color: rgba(250, 250, 250, 0.94);
-  background: rgba(255, 255, 255, 0.045);
 }
 
 .glass-navbar__item.is-active {
-  background: rgba(124, 58, 237, 0.16);
   color: #ffffff;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .glass-navbar__item.is-active::after {
-  width: calc(100% - 18px);
+  width: calc(100% - 20px);
 }
 
 .glass-navbar__connect {

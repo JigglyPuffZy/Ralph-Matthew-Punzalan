@@ -103,25 +103,23 @@ export default function FeaturedWorkSection({ featured }) {
                       type="button"
                     >
                       Locked
-                      <svg aria-hidden="true" viewBox="0 0 24 24">
-                        <rect x="5" y="11" width="14" height="10" rx="2" />
-                        <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="4.5" y="10.5" width="15" height="11" rx="2.5" />
+                        <path d="M7.5 10.5V7a4.5 4.5 0 0 1 9 0v3.5" />
                       </svg>
                     </button>
                   ) : activeProject.liveUrl ? (
                     <a className="featured-work__demo" href={activeProject.liveUrl} target="_blank" rel="noreferrer">
                       {getProjectActionLabel(activeProject)}
-                      <svg aria-hidden="true" viewBox="0 0 24 24">
-                        <path d="M7 17 17 7" />
-                        <path d="M9 7h8v8" />
+                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9" />
                       </svg>
                     </a>
                   ) : (
                     <a className="featured-work__demo" href={portfolioUrl} target="_blank" rel="noreferrer">
                       View Portfolio
-                      <svg aria-hidden="true" viewBox="0 0 24 24">
-                        <path d="M7 17 17 7" />
-                        <path d="M9 7h8v8" />
+                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9" />
                       </svg>
                     </a>
                   )}
@@ -167,8 +165,8 @@ export default function FeaturedWorkSection({ featured }) {
                   onClick={() => selectAdjacentFeaturedProject(-1)}
                   type="button"
                 >
-                  <svg aria-hidden="true" viewBox="0 0 24 24">
-                    <path d="m15 18-6-6 6-6" />
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m15.5 18.5-6.5-6.5 6.5-6.5" />
                   </svg>
                 </button>
                 <span className="featured-work__showcase-counter">
@@ -183,8 +181,8 @@ export default function FeaturedWorkSection({ featured }) {
                   onClick={() => selectAdjacentFeaturedProject(1)}
                   type="button"
                 >
-                  <svg aria-hidden="true" viewBox="0 0 24 24">
-                    <path d="m9 18 6-6-6-6" />
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m8.5 18.5 6.5-6.5-6.5-6.5" />
                   </svg>
                 </button>
               </div>
