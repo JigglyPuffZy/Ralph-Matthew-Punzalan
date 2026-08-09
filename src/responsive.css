@@ -909,9 +909,10 @@
   }
 
   .hero-title {
-    width: fit-content;
-    max-width: calc(100% - 24px);
-    font-size: clamp(1.85rem, 8.5vw, 2.75rem);
+    width: max-content;
+    max-width: 100%;
+    padding-inline: clamp(12px, 5vw, 20px);
+    font-size: clamp(1.75rem, 7.8vw, 2.75rem);
     margin-inline: auto;
   }
 
