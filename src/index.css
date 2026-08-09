@@ -29,7 +29,7 @@
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  overflow: visible;
   background: #030303;
   font-family: var(--font-body);
   padding-left: env(safe-area-inset-left);
@@ -92,10 +92,11 @@ blockquote {
 
 #root {
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
   scroll-padding-top: max(88px, calc(env(safe-area-inset-top) + 72px));
 }
 
