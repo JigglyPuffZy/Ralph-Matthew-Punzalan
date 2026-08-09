@@ -90,3 +90,96 @@ export const workflowSteps = [
     title: 'Go Live',
   },
 ]
+
+export const videoWorkflowSteps = [
+  {
+    className: 'workflow-module--start',
+    description: 'I review the brief, understand the brand message, target audience, and creative vision for the video.',
+    icon: (
+      <>
+        <rect x="4.5" y="5.5" width="15" height="13" rx="2" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M19.5 10l3.5 2-3.5 2z" />
+      </>
+    ),
+    step: '01',
+    tag: 'Brief',
+    title: 'Creative Vision',
+  },
+  {
+    className: 'workflow-module--discover',
+    description: 'I organize raw footage, audio files, and assets into a structured timeline for efficient editing.',
+    icon: (
+      <>
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M8.5 4.5h-3a1 1 0 0 0-1 1v3M19.5 4.5h-3M15.5 4.5h-7M8.5 19.5h-3a1 1 0 0 1-1-1v-3M19.5 19.5h-3M15.5 19.5h-7M19.5 8.5v3M19.5 15.5v-3" />
+        <rect x="17.5" y="3.5" width="3" height="3" rx=".5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        <rect x="17.5" y="17.5" width="3" height="3" rx=".5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      </>
+    ),
+    step: '02',
+    tag: 'Organize',
+    title: 'Asset Setup',
+  },
+  {
+    className: 'workflow-module--strategy',
+    description: 'I assemble the rough cut, selecting the best takes and arranging clips to tell a compelling story.',
+    icon: (
+      <>
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M4.5 4.5h6v6h-6zM13.5 4.5h6v6h-6zM4.5 13.5h6v6h-6zM13.5 13.5h6v6h-6z" />
+      </>
+    ),
+    step: '03',
+    tag: 'Edit',
+    title: 'Rough Cut',
+  },
+  {
+    className: 'workflow-module--design',
+    description: 'I add transitions, motion graphics, text overlays, and visual effects to enhance the narrative.',
+    icon: (
+      <>
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15M4.5 12h15" />
+        <circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M7.5 7.5l1.8 1.8M16.5 7.5l-1.8 1.8M7.5 16.5l1.8-1.8M16.5 16.5l-1.8-1.8" />
+      </>
+    ),
+    step: '04',
+    tag: 'Graphics',
+    title: 'Motion & VFX',
+  },
+  {
+    className: 'workflow-module--build',
+    description: 'I balance and enhance audio levels, add music, sound effects, and ensure crystal-clear dialogue.',
+    icon: (
+      <>
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M5.5 9v6M9.5 7v10M13.5 5v14M17.5 8v8" />
+      </>
+    ),
+    step: '05',
+    tag: 'Audio',
+    title: 'Sound Design',
+  },
+  {
+    className: 'workflow-module--review',
+    description: 'I apply color grading to set the mood, enhance visual consistency, and polish the final look.',
+    icon: (
+      <>
+        <circle cx="12" cy="12" r="7.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15" />
+      </>
+    ),
+    step: '06',
+    tag: 'Grade',
+    title: 'Color Correction',
+  },
+  {
+    className: 'workflow-module--launch',
+    description: 'I export the final video in the required format and resolution, ready for publishing or client delivery.',
+    icon: (
+      <>
+        <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v10M8.5 11l3.5 3.5 3.5-3.5M4.5 19.5h15" />
+      </>
+    ),
+    step: '07',
+    tag: 'Export',
+    title: 'Final Delivery',
+  },
+]

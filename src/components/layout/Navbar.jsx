@@ -8,9 +8,9 @@ function NavbarBrand({ className, onNavigate }) {
         alt="R4lph"
         className="glass-navbar__brand-logo"
         decoding="async"
-        height={128}
+        height={96}
         src={brandLogo}
-        width={460}
+        width={330}
       />
     </a>
   )

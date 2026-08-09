@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
 :root {
   --font-body: 'Inter', sans-serif;
   --font-heading: 'Lora', serif;

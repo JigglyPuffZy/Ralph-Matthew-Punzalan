@@ -5,6 +5,9 @@ import ghlLogo from '../assets/ghl logo.png'
 import photoshopLogo from '../assets/Photoshop-logo.png'
 import { icon } from '../utils/simpleIcon'
 
+/** @typedef {[string, string, string, string]} ToolItem */
+
+/** @type {ToolItem[]} */
 export const toolGridItems = [
   [icon('angular', 'DD0031'), 'Angular', 'angular.dev', 'https://angular.dev'],
   [canvaLogo, 'Canva', 'canva.com', 'https://www.canva.com'],
@@ -36,4 +39,64 @@ export const toolGridItems = [
   [icon('vite', '646CFF'), 'Vite', 'vite.dev', 'https://vite.dev'],
   [icon('webflow', '146EF5'), 'Webflow', 'webflow.com', 'https://webflow.com'],
   [icon('wordpress', '21759B'), 'WordPress', 'wordpress.org', 'https://wordpress.org'],
+]
+
+/** @type {{ id: string, label: string, reverse?: boolean, tools: ToolItem[] }[]} */
+export const toolCategories = [
+  {
+    id: 'design',
+    label: 'Design & Creative',
+    tools: [
+      [icon('figma', 'F24E1E'), 'Figma', 'figma.com', 'https://www.figma.com'],
+      [canvaLogo, 'Canva', 'canva.com', 'https://www.canva.com'],
+      [photoshopLogo, 'Photoshop', 'adobe.com', 'https://www.adobe.com/products/photoshop.html'],
+      [icon('framer', 'ffffff'), 'Framer Motion', 'motion.dev', 'https://motion.dev'],
+      [icon('davinciresolve', 'ffffff'), 'DaVinci Resolve', 'blackmagicdesign.com', 'https://www.blackmagicdesign.com/products/davinciresolve'],
+      [capcutLogo, 'CapCut', 'capcut.com', 'https://www.capcut.com'],
+    ],
+  },
+  {
+    id: 'frontend',
+    label: 'Frontend',
+    reverse: true,
+    tools: [
+      [icon('react', '61DAFB'), 'React', 'reactjs.org', 'https://reactjs.org'],
+      [icon('typescript', '3178C6'), 'TypeScript', 'typescriptlang.org', 'https://www.typescriptlang.org'],
+      [icon('javascript', 'F7DF1E'), 'JavaScript', 'developer.mozilla.org', 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'],
+      [icon('tailwindcss', '38BDF8'), 'Tailwind CSS', 'tailwindcss.com', 'https://tailwindcss.com'],
+      [icon('vite', '646CFF'), 'Vite', 'vite.dev', 'https://vite.dev'],
+      [icon('html5', 'E34F26'), 'HTML', 'developer.mozilla.org', 'https://developer.mozilla.org/en-US/docs/Web/HTML'],
+      [icon('css', '1572B6'), 'CSS', 'developer.mozilla.org', 'https://developer.mozilla.org/en-US/docs/Web/CSS'],
+      [icon('angular', 'DD0031'), 'Angular', 'angular.dev', 'https://angular.dev'],
+      [icon('react', '61DAFB'), 'React Native', 'reactnative.dev', 'https://reactnative.dev'],
+    ],
+  },
+  {
+    id: 'backend',
+    label: 'Backend & DevOps',
+    tools: [
+      [icon('nodedotjs', '5FA04E'), 'Node.js', 'nodejs.org', 'https://nodejs.org'],
+      [icon('express', 'ffffff'), 'Express', 'expressjs.com', 'https://expressjs.com'],
+      [icon('laravel', 'FF2D20'), 'Laravel', 'laravel.com', 'https://laravel.com'],
+      [icon('php', '777BB4'), 'PHP', 'php.net', 'https://www.php.net'],
+      [icon('mongodb', '47A248'), 'MongoDB', 'mongodb.com', 'https://www.mongodb.com'],
+      [icon('supabase', '3FCF8E'), 'Supabase', 'supabase.com', 'https://supabase.com'],
+      [icon('github', 'ffffff'), 'GitHub', 'github.com', 'https://github.com/JigglyPuffZy'],
+      [icon('vercel', 'ffffff'), 'Vercel', 'vercel.com', 'https://vercel.com'],
+    ],
+  },
+  {
+    id: 'platforms',
+    label: 'Platforms & CMS',
+    reverse: true,
+    tools: [
+      [icon('wordpress', '21759B'), 'WordPress', 'wordpress.org', 'https://wordpress.org'],
+      [icon('webflow', '146EF5'), 'Webflow', 'webflow.com', 'https://webflow.com'],
+      [diviLogo, 'Divi', 'elegantthemes.com', 'https://www.elegantthemes.com/gallery/divi'],
+      [icon('elementor', '92003B'), 'Elementor', 'elementor.com', 'https://elementor.com'],
+      [ghlLogo, 'GoHighLevel', 'gohighlevel.com', 'https://www.gohighlevel.com'],
+      [icon('flutter', '02569B'), 'Flutter', 'flutter.dev', 'https://flutter.dev'],
+      [icon('expo', 'ffffff'), 'Expo Go', 'expo.dev', 'https://expo.dev'],
+    ],
+  },
 ]

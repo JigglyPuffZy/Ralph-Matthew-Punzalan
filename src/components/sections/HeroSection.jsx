@@ -33,12 +33,12 @@ export default function HeroSection({ heroRef, canvasRef, drawLineSvgRef, drawPa
         <section className="hero-layout" aria-labelledby="hero-title">
           <div className="hero-copy">
             <h1 className="hero-title" id="hero-title">
-              <span>Digital Experiences</span>
-              <span>Built with Purpose.</span>
+              <span>Crafting Digital</span>
+              <span>Products & Visual Stories.</span>
             </h1>
             <p className="hero-subtitle">
-              I design and develop intuitive web and mobile products that combine
-              usability, performance, and thoughtful user experience.
+              I build intuitive web and mobile products, and create compelling video content
+              that captivates audiences through seamless design, performance, and storytelling.
             </p>
 
             <div className="hero-actions">

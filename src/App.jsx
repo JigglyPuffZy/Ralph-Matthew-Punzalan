@@ -1,4 +1,5 @@
 import './App.css'
+import './styles/experience-journey.css'
 import './contact-us.css'
 import './footer.css'
 import './responsive.css'
