@@ -1,4 +1,4 @@
-import resumePdf from '../assets/Punzalan Resume New.pdf'
+import resumePdf from '../assets/Ralph_Matthew_Punzalan_Resume.pdf'
 
 export const portfolioUrl = 'https://portfolio-pied-phi-21.vercel.app'
 
