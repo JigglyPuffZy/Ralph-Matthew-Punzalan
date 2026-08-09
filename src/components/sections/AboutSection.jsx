@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import matthewPhoto from '../../assets/Matthew pic.png'
 import { contactLocation } from '../../data/contact'
 import StatsCounter from '../ui/stats-counter'
+import SectionReveal from '../ui/SectionReveal'
 import ToolsShowcase from './ToolsShowcase'
 import { workflowSteps, videoWorkflowSteps } from '../../data/workflow'
 
@@ -22,6 +23,16 @@ const specialties = [
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="m8.5 8-3.5 4 3.5 4M15.5 8l3.5 4-3.5 4M13.5 5.5l-3 13" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Video Editing',
+    description: 'Engaging visual stories',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="2.5" />
+        <path d="m10 9.5 5 3-5 3V9.5Z" />
       </svg>
     ),
   },
@@ -76,7 +87,7 @@ const stats = [
 ]
 
 const infoItems = [
-  { label: 'Focus', value: 'Web & Mobile Interfaces' },
+  { label: 'Focus', value: 'Web, Mobile & Video Content' },
   { label: 'Location', value: contactLocation.label },
   { label: 'Availability', value: 'Open to work', live: true },
   {
@@ -90,7 +101,7 @@ const mindsetTags = ['Problem Solving', 'Continuous Learning', 'Persistence']
 
 export default function AboutSection() {
   return (
-    <section className="about-dashboard" id="about" aria-labelledby="about-title">
+    <SectionReveal as="section" className="about-dashboard" id="about" aria-labelledby="about-title">
       <div className="about-dashboard__ambient" aria-hidden="true">
         <span className="about-dashboard__orb about-dashboard__orb--one" />
         <span className="about-dashboard__orb about-dashboard__orb--two" />
@@ -112,13 +123,13 @@ export default function AboutSection() {
             </div>
 
             <div className="about-dashboard__showcase-copy">
-              <p className="about-dashboard__role">Front-end developer &amp; UI/UX designer</p>
+              <p className="about-dashboard__role">Front-end developer, UI/UX designer &amp; video editor</p>
               <h2 id="about-title">
                 R4lph Matthew <span>Punzalan</span>
               </h2>
               <p className="about-dashboard__bio">
-                I build clean, responsive interfaces with thoughtful user experience
-                and reliable implementation — from first wireframe to shipped code.
+                I build clean, responsive interfaces, craft thoughtful user experiences,
+                and edit compelling video content — from wireframe to shipped code and final cut.
               </p>
 
               <div className="about-dashboard__skills-row" aria-label="Core specialties">
@@ -351,6 +362,6 @@ export default function AboutSection() {
           <ToolsShowcase />
         </section>
       </div>
-    </section>
+    </SectionReveal>
   )
 }

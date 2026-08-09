@@ -12,8 +12,8 @@
 }
 
 :root {
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Lora', serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Lora', Georgia, 'Times New Roman', serif;
   color: #fafafa;
   background: #030303;
   font-family: var(--font-body);
@@ -58,6 +58,35 @@ li,
 label,
 figcaption,
 blockquote {
+  font-family: var(--font-body);
+}
+
+/* Uppercase UI labels — Inter even when marked up as headings */
+.about-dashboard__role,
+.about-dashboard__info-title,
+.site-footer__nav-title,
+.exp-journey__label,
+.contact-us__label,
+.tool-showcase__copy h4,
+.about-dashboard__metric-label,
+.about-dashboard__quote footer span,
+.featured-work__intel h4,
+.featured-work__tech h4 {
+  font-family: var(--font-body);
+}
+
+/* Card & form titles — Inter for UI consistency */
+.contact-us__form-head h3,
+.contact-us__info-head h3,
+.about-dashboard__skill strong {
+  font-family: var(--font-body);
+}
+
+/* Stat numbers & UI emphasis */
+.about-dashboard__metric strong,
+.about-dashboard__metric-count,
+.hero-eyebrow,
+.hero-subtitle {
   font-family: var(--font-body);
 }
 

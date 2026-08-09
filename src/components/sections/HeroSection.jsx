@@ -37,8 +37,8 @@ export default function HeroSection({ heroRef, canvasRef, drawLineSvgRef, drawPa
               <span>Products & Visual Stories.</span>
             </h1>
             <p className="hero-subtitle">
-              I build intuitive web and mobile products, and create compelling video content
-              that captivates audiences through seamless design, performance, and storytelling.
+              Front-end developer, UI/UX designer, and video editor — I build intuitive web and mobile
+              products and create compelling video content through seamless design, performance, and storytelling.
             </p>
 
             <div className="hero-actions">

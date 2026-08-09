@@ -205,7 +205,7 @@ html {
     0 0 22px rgba(139, 92, 246, 0.16);
   color: var(--text-primary);
   font-size: 12px;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1;
   opacity: 0;
@@ -500,7 +500,7 @@ html {
   color: rgba(237, 233, 254, 0.62);
   font-family: var(--font-body);
   font-size: 0.72rem;
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: 0.06em;
   line-height: 1;
   text-decoration: none;
@@ -551,7 +551,7 @@ html {
   color: #ffffff;
   font-family: var(--font-body);
   font-size: 0.72rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1;
   text-decoration: none;
@@ -691,7 +691,7 @@ html {
   background-clip: text;
   -webkit-background-clip: text;
   font-size: clamp(2.7rem, 4.75vw, 4.5rem);
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1.04;
   text-align: center;
@@ -713,7 +713,7 @@ html {
   margin: 26px auto 0;
   color: rgba(245, 243, 255, 0.94);
   font-size: clamp(1rem, 1.6vw, 1.12rem);
-  font-weight: 620;
+  font-weight: 600;
   line-height: 1.7;
   text-align: center;
   text-wrap: balance;
@@ -973,7 +973,7 @@ html {
   margin: 0 0 28px;
   color: rgba(212, 212, 216, 0.76);
   font-size: 12px;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.16em;
   line-height: 1;
   text-transform: uppercase;
@@ -1022,7 +1022,7 @@ html {
   margin: 26px 0 0;
   color: var(--text-secondary);
   font-size: clamp(0.95rem, 1.25vw, 1.05rem);
-  font-weight: 520;
+  font-weight: 500;
   line-height: 1.78;
 }
 
@@ -1108,7 +1108,7 @@ html {
   margin: 0;
   color: var(--text-muted);
   font-size: 11px;
-  font-weight: 520;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -1173,7 +1173,7 @@ html {
   margin-bottom: 9px;
   color: var(--accent-bright);
   font-size: clamp(1.35rem, 2.05vw, 1.75rem);
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: -0.06em;
   line-height: 1;
 }
@@ -1387,7 +1387,7 @@ html {
 .about-contact span {
   color: var(--text-secondary);
   font-size: 0.95rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .about-contact strong {
@@ -1548,7 +1548,7 @@ html {
   margin: 0 0 24px;
   color: #c4b5fd;
   font-size: 11px;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1641,7 +1641,7 @@ html {
   margin-bottom: 14px;
   color: #8b5cf6;
   font-size: 11px;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1902,7 +1902,7 @@ html {
   margin: 0;
   color: #f5f5f5;
   font-size: 11px;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .skill-row {
@@ -1926,7 +1926,7 @@ html {
   color: #d4d4d8;
   font-size: 10px;
   font-style: normal;
-  font-weight: 850;
+  font-weight: 700;
 }
 
 .os-timeline {
@@ -2152,7 +2152,7 @@ html {
 .about-dashboard__nav div a {
   color: rgba(237, 233, 254, 0.62);
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -2171,7 +2171,7 @@ html {
   border-radius: 999px;
   background: rgba(var(--accent-rgb), 0.1);
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 700;
 }
 
 .about-dashboard__connect span {
@@ -2210,7 +2210,7 @@ html {
   margin: 0;
   color: rgba(237, 233, 254, 0.58);
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -2236,7 +2236,7 @@ html {
   margin: 0 0 22px;
   color: var(--accent-bright);
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -2360,7 +2360,7 @@ html {
   background: rgba(8, 10, 16, 0.82);
   color: rgba(237, 233, 254, 0.88);
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   backdrop-filter: blur(12px);
@@ -2399,7 +2399,7 @@ html {
   margin: 0 0 12px;
   color: rgba(var(--accent-bright-rgb), 0.88);
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -2441,7 +2441,7 @@ html {
 
 .about-dashboard__skills-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-top: 28px;
 }
@@ -2498,7 +2498,7 @@ html {
 .about-dashboard__skill strong {
   color: #ffffff;
   font-size: 0.78rem;
-  font-weight: 850;
+  font-weight: 700;
   line-height: 1.25;
 }
 
@@ -2523,7 +2523,7 @@ html {
   padding: 0 22px;
   border-radius: 999px;
   font-size: 0.72rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1;
   text-decoration: none;
@@ -2642,7 +2642,7 @@ html {
   max-width: 11rem;
   color: rgba(237, 233, 254, 0.72);
   font-size: clamp(0.82rem, 1.35vw, 0.98rem);
-  font-weight: 750;
+  font-weight: 700;
   line-height: 1.45;
   letter-spacing: 0.01em;
 }
@@ -2669,7 +2669,6 @@ html {
 .about-dashboard__quote p {
   margin: 0;
   color: rgba(244, 244, 245, 0.92);
-  font-family: var(--font-heading);
   font-size: clamp(1.1rem, 2vw, 1.45rem);
   font-style: italic;
   font-weight: 400;
@@ -2704,7 +2703,7 @@ html {
   margin: 0 0 18px;
   color: var(--accent-bright);
   font-size: 0.62rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -2738,7 +2737,7 @@ html {
 .about-dashboard__info-card dt {
   color: rgba(237, 233, 254, 0.52);
   font-size: 0.62rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -3018,7 +3017,7 @@ html {
   font-style: normal;
   color: #ffffff;
   font-size: 0.72rem;
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: 0.08em;
   background:
     radial-gradient(circle at 50% 30%, rgba(196, 181, 253, 0.24), transparent 54%),
@@ -3211,7 +3210,7 @@ html {
 .product-core span {
   color: #c4b5fd;
   font-size: 0.56rem;
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -3221,7 +3220,7 @@ html {
 .product-core strong {
   color: #ffffff;
   font-size: 0.78rem;
-  font-weight: 850;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -3747,7 +3746,7 @@ html {
   margin-bottom: 5px;
   color: var(--workflow-accent-strong);
   font-size: 0.58rem;
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -3786,7 +3785,7 @@ html {
     0 0 30px rgba(var(--workflow-accent), 0.18);
   color: rgba(244, 244, 245, 0.86);
   font-size: 0.72rem;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.55;
   opacity: 0;
@@ -4026,7 +4025,7 @@ html {
 .tool-showcase__index {
   color: rgba(var(--tool-accent-rgb, var(--accent-bright-rgb)), 0.72);
   font-size: 0.58rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.16em;
 }
 
@@ -4056,7 +4055,7 @@ html {
   margin: 0;
   color: #fff;
   font-size: 0.72rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1.35;
   text-transform: uppercase;
@@ -4066,7 +4065,7 @@ html {
   margin: 2px 0 0;
   color: rgba(237, 233, 254, 0.46);
   font-size: 0.62rem;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.35;
 }
 
@@ -4276,7 +4275,7 @@ html {
   background: transparent;
   color: #d4d4d8;
   font-size: 0.7rem;
-  font-weight: 850;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   box-shadow: none;
@@ -4392,7 +4391,7 @@ html {
 .tool-preview__hero strong {
   color: #ffffff;
   font-size: 0.92rem;
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: -0.02em;
 }
 
@@ -4401,7 +4400,7 @@ html {
   color: rgba(212, 212, 216, 0.7);
   font-size: 0.58rem;
   font-style: normal;
-  font-weight: 750;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -4536,7 +4535,7 @@ html {
   margin: 0 0 12px;
   color: rgba(237, 233, 254, 0.58);
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -4595,7 +4594,7 @@ html {
   background: rgba(255, 255, 255, 0.03);
   color: rgba(245, 243, 255, 0.82);
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-decoration: none;
   text-transform: uppercase;
@@ -4659,7 +4658,7 @@ html {
   background: transparent;
   color: rgba(237, 233, 254, 0.78);
   font-size: 0.78rem;
-  font-weight: 750;
+  font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
   transition:
@@ -5001,14 +5000,14 @@ html {
 .featured-work__meta-type {
   color: rgba(237, 233, 254, 0.52);
   font-size: 0.68rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .featured-work__subtitle {
   margin: 10px 0 0;
   color: var(--accent-bright);
   font-size: 0.8rem;
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: 0.01em;
 }
 
@@ -5665,7 +5664,7 @@ html {
   padding-left: 2px;
   color: var(--accent-bright);
   font-size: 0.62rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -5717,7 +5716,7 @@ html {
 .featured-work__intel-key {
   color: rgba(245, 243, 255, 0.92);
   font-size: 0.8rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .featured-work__intel-value {
@@ -6065,7 +6064,7 @@ html {
 .featured-work__gallery-overlay span {
   color: rgba(237, 233, 254, 0.58);
   font-size: 0.64rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .featured-work__gallery-thumb span {
@@ -6344,7 +6343,7 @@ html {
   background: rgba(10, 7, 21, 0.72);
   color: rgba(245, 243, 255, 0.64);
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   box-shadow:
@@ -6453,7 +6452,7 @@ html {
     rgba(12, 8, 25, 0.82);
   color: #ffffff;
   font-size: 0.76rem;
-  font-weight: 850;
+  font-weight: 700;
   text-decoration: none;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.09),
@@ -6511,7 +6510,7 @@ html {
   color: rgba(245, 243, 255, 0.76);
   font: inherit;
   font-size: 0.72rem;
-  font-weight: 750;
+  font-weight: 700;
   cursor: pointer;
   transition:
     background 180ms ease,
@@ -6595,7 +6594,7 @@ button[aria-expanded='true'] .project-filter-chevron {
   background: rgba(255, 255, 255, 0.035);
   color: rgba(245, 243, 255, 0.88);
   font-size: 0.72rem;
-  font-weight: 850;
+  font-weight: 700;
   text-align: left;
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.28);
 }
@@ -6762,7 +6761,7 @@ button[aria-expanded='true'] .project-filter-chevron {
   background: rgba(255, 255, 255, 0.035);
   color: rgba(245, 243, 255, 0.78);
   font-size: 0.62rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .project-grid-card__content > a {
@@ -6813,7 +6812,7 @@ button[aria-expanded='true'] .project-filter-chevron {
   margin: 0;
   color: #ffffff;
   font-size: clamp(2.45rem, 4.4vw, 4.25rem);
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: -0.06em;
   line-height: 1.18;
   padding: 0.08em 0 0.12em;
@@ -6890,7 +6889,7 @@ button[aria-expanded='true'] .project-filter-chevron {
   color: rgba(245, 243, 255, 0.6);
   font: inherit;
   font-size: 0.65rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.045em;
   text-align: left;
   text-transform: uppercase;
@@ -7108,7 +7107,7 @@ button[aria-expanded='true'] .project-filter-chevron {
   position: relative;
   z-index: 1;
   font-size: 0.96rem;
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: -0.02em;
 }
 
@@ -7281,7 +7280,7 @@ button[aria-expanded='true'] .project-filter-chevron {
 .projects-orbit__core strong {
   color: #8b5cf6;
   font-size: 2.15rem;
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: -0.05em;
   line-height: 1;
   text-shadow: 0 0 22px rgba(168, 85, 247, 0.62);
@@ -7500,7 +7499,7 @@ button[aria-expanded='true'] .project-filter-chevron {
   padding-top: 10px;
   color: #ddd6fe;
   font-size: 0.58rem;
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: 0.1em;
   text-decoration: none;
   text-transform: uppercase;
@@ -8669,19 +8668,14 @@ h4,
 h5,
 h6,
 .hero-title,
-.about-dashboard__intro h2,
-.about-dashboard__tile--profile h2,
 .about-dashboard__showcase-copy h2,
-.photo-note small,
+.about-dashboard__tile--profile h2,
+.dashboard-panel h3,
 .dashboard-signature,
 .profile-signature,
 .profile-quote > span,
 .os-title,
-.core-orb span,
-.timeline-node span,
 .projects-showcase h2,
-.projects-orbit__core strong,
-.project-orbit-card strong,
 .featured-work__header-copy h2,
 .featured-work__intro h2,
 .featured-work__info h3,
@@ -8690,46 +8684,13 @@ h6,
 .exp-journey__profile-title,
 .exp-journey__detail h4,
 .contact-us__intro h2,
-.contact-us__form-head h3,
-.contact-us__info-head h3,
 .site-footer__thanks,
 .profile-specialties strong,
 .workflow-module strong,
-.project-grid-card__content h3 {
+.project-grid-card__content h3,
+.about-dashboard__quote p,
+.contact-us__quote p {
   font-family: var(--font-heading);
-}
-
-.dashboard-panel h3,
-.exp-journey__label,
-.featured-work__intel h4,
-.featured-work__tech h4,
-.contact-us__label,
-.featured-work__gallery-head-copy strong,
-.dashboard-stats strong,
-.project-orbit-card small,
-.project-orbit-card p,
-.project-orbit-card a,
-.contact-us__availability strong,
-.site-footer,
-.site-footer__lead,
-.site-footer__cta,
-.site-footer__tagline,
-.site-footer__copy,
-button,
-input,
-textarea,
-select,
-.app-shell,
-.about-dashboard,
-.hero-subtitle,
-.dashboard-panel,
-.dashboard-info,
-.photo-note,
-.tool-grid,
-.hero-button,
-.hero-socials,
-.glass-navbar {
-  font-family: var(--font-body);
 }
 
 .featured-work__header-copy h2 span,
@@ -8738,7 +8699,7 @@ select,
 .contact-us__intro h2 span,
 .site-footer__thanks span,
 .projects-showcase h2 span,
-.about-dashboard__intro h2 .impact-line {
+.about-dashboard__showcase-copy h2 span {
   font-family: var(--font-heading);
 }
 
@@ -8746,6 +8707,24 @@ select,
 .profile-signature,
 .profile-quote > span,
 .contact-us__quote p {
-  font-family: var(--font-heading);
   font-style: italic;
+}
+
+.hero-title {
+  font-weight: 700;
+}
+
+.app-shell,
+.about-dashboard,
+.dashboard-panel,
+.tool-grid,
+.glass-navbar,
+.site-footer,
+.hero-button,
+.hero-socials,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
 }

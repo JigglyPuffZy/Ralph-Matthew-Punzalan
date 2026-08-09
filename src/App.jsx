@@ -1,5 +1,6 @@
 import './App.css'
 import './styles/experience-journey.css'
+import './styles/section-reveal.css'
 import './contact-us.css'
 import './footer.css'
 import './responsive.css'

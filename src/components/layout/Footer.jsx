@@ -2,6 +2,7 @@ import brandLogo from '../../assets/logo ralph.png'
 import { contactSocials } from '../../data/contact'
 import { primaryNavItems } from '../../data/navigation'
 import { renderContactSocialIcon } from '../../utils/icons/contactIcons'
+import SectionReveal from '../ui/SectionReveal'
 
 const footerNavItems = [
   ...primaryNavItems,
@@ -12,7 +13,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="site-footer" aria-labelledby="site-footer-thanks">
+    <SectionReveal as="footer" className="site-footer" aria-labelledby="site-footer-thanks">
       <div className="site-footer__ambient" aria-hidden="true">
         <span className="site-footer__orb site-footer__orb--left" />
         <span className="site-footer__orb site-footer__orb--right" />
@@ -35,7 +36,7 @@ export default function Footer() {
                 />
               </a>
               <p className="site-footer__brand-copy">
-                Front-end developer &amp; UI/UX designer crafting clean, responsive digital experiences.
+                Front-end developer, UI/UX designer &amp; video editor crafting interfaces and visual stories.
               </p>
               <div className="site-footer__socials">
                 {contactSocials.map((social) => (
@@ -90,11 +91,11 @@ export default function Footer() {
           </div>
 
           <div className="site-footer__bottom">
-            <p className="site-footer__tagline">Designing • Developing • Elevating</p>
+            <p className="site-footer__tagline">Designing • Developing • Editing</p>
             <p className="site-footer__copy">&copy; {year} R4lph. All rights reserved.</p>
           </div>
         </div>
       </div>
-    </footer>
+    </SectionReveal>
   )
 }

@@ -7,6 +7,7 @@ import {
   getExperienceTechIcon,
   renderExperienceAchievementIcon,
 } from '../../utils/icons/experienceIcons'
+import SectionReveal from '../ui/SectionReveal'
 
 function RolePickerItem({ role, isActive, onSelect }) {
   return (
@@ -68,7 +69,7 @@ export default function ExperienceSection({ activeExperience, activeExperienceId
   }, [goNext, goPrev])
 
   return (
-    <section className="exp-journey" id="experience" aria-labelledby="experience-title">
+    <SectionReveal as="section" className="exp-journey" id="experience" aria-labelledby="experience-title">
       <div className="exp-journey__ambient" aria-hidden="true">
         <span className="exp-journey__orb exp-journey__orb--one" />
         <span className="exp-journey__orb exp-journey__orb--two" />
@@ -264,6 +265,6 @@ export default function ExperienceSection({ activeExperience, activeExperienceId
           </div>
         </article>
       </div>
-    </section>
+    </SectionReveal>
   )
 }

@@ -156,7 +156,7 @@
   margin: 0 0 16px;
   color: var(--accent-bright);
   font-size: 0.62rem;
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -208,7 +208,7 @@
   background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   color: #ffffff;
   font-size: 0.72rem;
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 0.1em;
   line-height: 1;
   text-decoration: none;

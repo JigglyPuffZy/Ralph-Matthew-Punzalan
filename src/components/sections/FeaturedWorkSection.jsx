@@ -10,6 +10,7 @@ import {
   renderFeaturedTagIcon,
   renderIntelIcon,
 } from '../../utils/icons/featuredIcons'
+import SectionReveal from '../ui/SectionReveal'
 
 export default function FeaturedWorkSection({ featured }) {
   const {
@@ -31,7 +32,7 @@ export default function FeaturedWorkSection({ featured }) {
   } = featured
 
   return (
-    <section className="featured-work" id="projects" aria-labelledby="projects-title">
+    <SectionReveal as="section" className="featured-work" id="projects" aria-labelledby="projects-title">
       <div className="featured-work__inner">
         <header className="featured-work__intro">
           <div className="featured-work__header-copy">
@@ -286,6 +287,6 @@ export default function FeaturedWorkSection({ featured }) {
           </div>
         </div>
       </div>
-    </section>
+    </SectionReveal>
   )
 }

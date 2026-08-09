@@ -1,6 +1,7 @@
 import contactUsImage from '../../assets/Contact Us Image.png'
 import { contactChannels, contactLocation, contactQuotes, contactSocials } from '../../data/contact'
 import { renderContactChannelIcon, renderContactSocialIcon } from '../../utils/icons/contactIcons'
+import SectionReveal from '../ui/SectionReveal'
 
 export default function ContactSection({
   contactForm,
@@ -12,7 +13,7 @@ export default function ContactSection({
   updateContactField,
 }) {
   return (
-    <section className="contact-us" id="contact" aria-labelledby="contact-title">
+    <SectionReveal as="section" className="contact-us" id="contact" aria-labelledby="contact-title">
       <div className="contact-us__glow contact-us__glow--left" aria-hidden="true" />
       <div className="contact-us__inner">
         <div className="contact-us__hero">
@@ -319,6 +320,6 @@ export default function ContactSection({
           </article>
         </div>
       </div>
-    </section>
+    </SectionReveal>
   )
 }

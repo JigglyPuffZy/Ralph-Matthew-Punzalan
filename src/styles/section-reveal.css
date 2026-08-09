@@ -1,0 +1,24 @@
+.section-reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  filter: blur(8px);
+  transition:
+    opacity 820ms cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0ms),
+    transform 820ms cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0ms),
+    filter 820ms cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0ms);
+}
+
+.section-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
