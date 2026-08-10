@@ -239,15 +239,14 @@
   .featured-work__preview--video .featured-work__preview-stage {
     width: 100%;
     max-width: 100%;
-    max-height: min(calc((100vw - 64px) * 0.56), 50vh);
     margin: 0 auto;
   }
 
   .featured-work__preview-shot--video,
   .featured-work__preview--video video.featured-work__preview-shot {
     width: 100%;
-    height: 100%;
-    max-height: min(calc((100vw - 64px) * 0.56), 50vh);
+    height: auto;
+    max-height: min(44vh, 360px);
     object-fit: contain;
     object-position: center;
   }
