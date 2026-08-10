@@ -1,9 +1,9 @@
 export const experienceRoles = [
   {
     achievements: [
-      { description: 'Delivered the CEST Dashboard for monitoring regional science programs.', icon: 'rocket', title: 'CEST Dashboard' },
-      { description: 'Built reporting views that helped stakeholders track initiative progress.', icon: 'star', title: 'Reporting Features' },
-      { description: 'Created promotional videos and multimedia content for DOST programs.', icon: 'bolt', title: 'Video Production' }
+      { description: 'Delivered the CEST Dashboard for monitoring regional science programs.', icon: 'dashboard', title: 'CEST Dashboard' },
+      { description: 'Built reporting views that helped stakeholders track initiative progress.', icon: 'chart', title: 'Reporting Features' },
+      { description: 'Created promotional videos and multimedia content for DOST programs.', icon: 'video', title: 'Video Production' }
     ],
     company: 'Department of Science and Technology Region II',
     duration: '4 Months',
@@ -13,7 +13,7 @@ export const experienceRoles = [
     initials: 'DO',
     isCurrent: false,
     location: 'Region II, Philippines',
-    period: 'Mar 2026 - Jun 2026',
+    period: 'March 2026 – June 2026',
     responsibilities: [
       'Developed the CEST Dashboard to help DOST teams monitor regional science programs in one centralized platform.',
       'Designed dashboards and data visualizations that present complex metrics in a clear, actionable format.',
@@ -29,7 +29,7 @@ export const experienceRoles = [
     achievements: [
       { description: 'Optimized component architecture for faster load times and smoother interactions.', icon: 'bolt', title: 'Performance Optimization' },
       { description: 'Shipped production-ready interfaces for enterprise and client-facing products.', icon: 'rocket', title: 'Production Delivery' },
-      { description: 'Built reusable UI components that reduced repeat development effort.', icon: 'star', title: 'Reusable UI Systems' }
+      { description: 'Built reusable UI components that reduced repeat development effort.', icon: 'components', title: 'Reusable UI Systems' }
     ],
     company: 'One Over Zero Technologies, Inc.',
     duration: '6 Months',
@@ -39,7 +39,7 @@ export const experienceRoles = [
     initials: 'OZ',
     isCurrent: false,
     location: 'Philippines',
-    period: 'Jan 2026 - Jun 2026',
+    period: 'January 2026 – June 2026',
     responsibilities: [
       'Translated product requirements and designs into production-ready React and Next.js applications.',
       'Built responsive, accessible interfaces optimized for performance across devices and screen sizes.',
@@ -53,9 +53,9 @@ export const experienceRoles = [
   },
   {
     achievements: [
-      { description: 'Redesigned the Australian Rewards Club prize section landing page.', icon: 'rocket', title: 'ARC Landing Page' },
-      { description: 'Enhanced visual hierarchy, responsiveness, and accessibility.', icon: 'star', title: 'UX Improvements' },
-      { description: 'Collaborated with design and back-end teams for consistent experience.', icon: 'bolt', title: 'Cross-Team Collaboration' }
+      { description: 'Redesigned the Australian Rewards Club prize section landing page.', icon: 'layout', title: 'ARC Landing Page' },
+      { description: 'Enhanced visual hierarchy, responsiveness, and accessibility.', icon: 'sliders', title: 'UX Improvements' },
+      { description: 'Collaborated with design and back-end teams for consistent experience.', icon: 'users', title: 'Cross-Team Collaboration' }
     ],
     company: 'VA4U',
     duration: '1 Month',
@@ -65,7 +65,7 @@ export const experienceRoles = [
     initials: 'VA',
     isCurrent: false,
     location: 'Remote',
-    period: 'Oct 2025',
+    period: 'October 2025',
     responsibilities: [
       'Work on the Australian Rewards Club website, focusing on building and optimizing the user interface.',
       'Redesigned the prize section landing page to enhance visual hierarchy and responsiveness.',
@@ -77,9 +77,9 @@ export const experienceRoles = [
   },
   {
     achievements: [
-      { description: 'Designed and delivered the Brioray platform experience in Figma and React.', icon: 'rocket', title: 'Brioray Platform' },
-      { description: 'Improved onboarding flows and interface clarity across key product screens.', icon: 'star', title: 'Usability Improvements' },
-      { description: 'Maintained consistent branding and UI patterns across web touchpoints.', icon: 'bolt', title: 'Design System Consistency' }
+      { description: 'Designed and delivered the Brioray platform experience in Figma and React.', icon: 'monitor', title: 'Brioray Platform' },
+      { description: 'Improved onboarding flows and interface clarity across key product screens.', icon: 'flow', title: 'Usability Improvements' },
+      { description: 'Maintained consistent branding and UI patterns across web touchpoints.', icon: 'palette', title: 'Design System Consistency' }
     ],
     company: 'Caribbean LED Solutions',
     duration: '15 Months',
@@ -89,7 +89,7 @@ export const experienceRoles = [
     initials: 'CL',
     isCurrent: false,
     location: 'Remote',
-    period: 'Nov 2024 - Feb 2026',
+    period: 'November 2024 – February 2026',
     responsibilities: [
       'Led end-to-end UI delivery for the Brioray platform, from Figma design through React implementation.',
       'Built responsive layouts with Tailwind CSS to ensure a polished experience across all devices.',
@@ -102,9 +102,9 @@ export const experienceRoles = [
   },
   {
     achievements: [
-      { description: 'Organized office records and documentation for faster retrieval.', icon: 'bolt', title: 'Documentation Systems' },
-      { description: 'Produced campaign visuals for SK and barangay community programs.', icon: 'star', title: 'Campaign Creative' },
-      { description: 'Supported day-to-day coordination across administrative workflows.', icon: 'rocket', title: 'Operational Support' }
+      { description: 'Organized office records and documentation for faster retrieval.', icon: 'folder', title: 'Documentation Systems' },
+      { description: 'Produced campaign visuals for SK and barangay community programs.', icon: 'megaphone', title: 'Campaign Creative' },
+      { description: 'Supported day-to-day coordination across administrative workflows.', icon: 'clipboard', title: 'Operational Support' }
     ],
     company: 'DILG',
     duration: '4 Months',
@@ -114,7 +114,7 @@ export const experienceRoles = [
     initials: 'DI',
     isCurrent: false,
     location: 'Philippines',
-    period: 'Aug 2024 - Nov 2024',
+    period: 'August 2024 – November 2024',
     responsibilities: [
       'Managed office records and administrative documentation to support efficient daily operations.',
       'Designed campaign visuals and promotional materials for SK and barangay community programs.',
@@ -126,9 +126,9 @@ export const experienceRoles = [
   },
   {
     achievements: [
-      { description: 'Redesigned internal system screens to improve staff navigation.', icon: 'bolt', title: 'Internal UI Redesign' },
-      { description: 'Delivered visual assets and content for government initiatives.', icon: 'star', title: 'Public Communications' },
-      { description: 'Improved consistency across digital materials and social channels.', icon: 'rocket', title: 'Brand Consistency' }
+      { description: 'Redesigned internal system screens to improve staff navigation.', icon: 'layout', title: 'Internal UI Redesign' },
+      { description: 'Delivered visual assets and content for government initiatives.', icon: 'megaphone', title: 'Public Communications' },
+      { description: 'Improved consistency across digital materials and social channels.', icon: 'palette', title: 'Brand Consistency' }
     ],
     company: 'LGU Sto. Tomas',
     duration: '3 Months',
@@ -138,7 +138,7 @@ export const experienceRoles = [
     initials: 'LG',
     isCurrent: false,
     location: 'Sto. Tomas, Isabela',
-    period: 'Jun 2024 - Aug 2024',
+    period: 'June 2024 – August 2024',
     responsibilities: [
       'Redesigned internal system interfaces to improve navigation and staff workflow efficiency.',
       'Created visual assets and content for municipal announcements and public-facing campaigns.',
@@ -151,18 +151,18 @@ export const experienceRoles = [
   {
     achievements: [
       { description: 'Delivered client and personal web projects from concept to launch.', icon: 'rocket', title: 'Independent Delivery' },
-      { description: 'Built responsive landing pages and interface prototypes in Figma.', icon: 'star', title: 'UI Prototyping' },
-      { description: 'Established front-end foundations used across later professional roles.', icon: 'bolt', title: 'Front-End Foundations' }
+      { description: 'Built responsive landing pages and interface prototypes in Figma.', icon: 'prototype', title: 'UI Prototyping' },
+      { description: 'Established front-end foundations used across later professional roles.', icon: 'code', title: 'Front-End Foundations' }
     ],
     company: 'Freelance / Client Projects',
-    duration: '12 Months',
+    duration: '8 Months',
     employmentType: 'Freelance',
     focusAreas: ['Web Development', 'UI/UX Design', 'Landing Pages', 'Client Delivery'],
     id: 'freelance',
     initials: 'FR',
     isCurrent: false,
     location: 'Philippines',
-    period: 'Jun 2023 - May 2024',
+    period: 'November 2023 – June 2024',
     responsibilities: [
       'Designed and developed client websites from initial wireframes through production launch.',
       'Created UI flows and prototypes in Figma, then implemented responsive front-end experiences.',

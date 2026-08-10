@@ -3,6 +3,7 @@ import capcutLogo from '../assets/capcut logo.webp'
 import diviLogo from '../assets/divi logo.png'
 import ghlLogo from '../assets/ghl logo.png'
 import photoshopLogo from '../assets/Photoshop-logo.png'
+import premiereProLogo from '../assets/premiere pro logo.svg'
 import { icon } from '../utils/simpleIcon'
 
 export const featuredTechIcons = {
@@ -31,6 +32,9 @@ export const featuredTechIcons = {
   Vite: icon('vite', '646CFF'),
   WordPress: icon('wordpress', '21759B'),
   'Next.js': icon('nextdotjs', 'ffffff'),
+  'Adobe Premiere Pro': premiereProLogo,
+  'DaVinci Resolve': icon('davinciresolve', 'ffffff'),
+  CapCut: capcutLogo,
 }
 
 export const experienceTechIcons = {
@@ -38,4 +42,6 @@ export const experienceTechIcons = {
   Canva: canvaLogo,
   CapCut: capcutLogo,
   Photoshop: photoshopLogo,
+  'Adobe Premiere Pro': premiereProLogo,
+  'DaVinci Resolve': icon('davinciresolve', 'ffffff'),
 }

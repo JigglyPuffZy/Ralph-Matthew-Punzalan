@@ -1,4 +1,4 @@
-import { getProjectImage, getProjectPreviewMode } from '../../projectImages'
+import { getProjectImage, getProjectPreviewMode, isVideoProject } from '../../projectImages'
 import { featuredTechIcons } from '../../data/techIcons'
 import {
   getProjectActionLabel,
@@ -96,34 +96,35 @@ export default function FeaturedWorkSection({ featured }) {
                   ))}
                 </div>
                 <div className="featured-work__actions">
-                  {isLockedPortfolioProject(activeProject.id, activeCategory.type) ? (
-                    <button
-                      aria-disabled="true"
-                      className="featured-work__demo featured-work__demo--locked"
-                      disabled
-                      type="button"
-                    >
-                      Locked
-                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="4.5" y="10.5" width="15" height="11" rx="2.5" />
-                        <path d="M7.5 10.5V7a4.5 4.5 0 0 1 9 0v3.5" />
-                      </svg>
-                    </button>
-                  ) : activeProject.liveUrl ? (
-                    <a className="featured-work__demo" href={activeProject.liveUrl} target="_blank" rel="noreferrer">
-                      {getProjectActionLabel(activeProject)}
-                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9" />
-                      </svg>
-                    </a>
-                  ) : (
-                    <a className="featured-work__demo" href={portfolioUrl} target="_blank" rel="noreferrer">
-                      View Portfolio
-                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9" />
-                      </svg>
-                    </a>
-                  )}
+                  {!isVideoProject(activeProject.id) &&
+                    (isLockedPortfolioProject(activeProject.id, activeCategory.type) ? (
+                      <button
+                        aria-disabled="true"
+                        className="featured-work__demo featured-work__demo--locked"
+                        disabled
+                        type="button"
+                      >
+                        Locked
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="4.5" y="10.5" width="15" height="11" rx="2.5" />
+                          <path d="M7.5 10.5V7a4.5 4.5 0 0 1 9 0v3.5" />
+                        </svg>
+                      </button>
+                    ) : activeProject.liveUrl ? (
+                      <a className="featured-work__demo" href={activeProject.liveUrl} target="_blank" rel="noreferrer">
+                        {getProjectActionLabel(activeProject)}
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9" />
+                        </svg>
+                      </a>
+                    ) : (
+                      <a className="featured-work__demo" href={portfolioUrl} target="_blank" rel="noreferrer">
+                        View Portfolio
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9" />
+                        </svg>
+                      </a>
+                    ))}
                 </div>
               </div>
             </div>
@@ -138,12 +139,24 @@ export default function FeaturedWorkSection({ featured }) {
                   >
                     <div className={`featured-work__preview-stage${isMobileShowcase ? ' featured-work__preview-stage--mobile' : ''}`}>
                       <div className="featured-work__preview-spotlight" aria-hidden="true" />
-                      <img
-                        alt={`${activeProject.title} preview`}
-                        className={`featured-work__preview-shot${isMobileShowcase ? ' featured-work__preview-shot--mobile' : ''}`}
-                        loading="lazy"
-                        src={getProjectImage(activeProject.id)}
-                      />
+                      {isVideoProject(activeProject.id) ? (
+                        <video
+                          key={activeProject.id}
+                          aria-label={`${activeProject.title} preview`}
+                          className={`featured-work__preview-shot${isMobileShowcase ? ' featured-work__preview-shot--mobile' : ''}`}
+                          controls
+                          playsInline
+                          preload="metadata"
+                          src={getProjectImage(activeProject.id)}
+                        />
+                      ) : (
+                        <img
+                          alt={`${activeProject.title} preview`}
+                          className={`featured-work__preview-shot${isMobileShowcase ? ' featured-work__preview-shot--mobile' : ''}`}
+                          loading="lazy"
+                          src={getProjectImage(activeProject.id)}
+                        />
+                      )}
                     </div>
                   </div>
                 ) : (
@@ -266,7 +279,17 @@ export default function FeaturedWorkSection({ featured }) {
                 <div className="featured-work__gallery-media">
                   <div className={`featured-work__gallery-thumb featured-work__gallery-thumb--${activeCategory.accent}${isMobileShowcase ? ' featured-work__gallery-thumb--mobile' : ''}`}>
                     {getProjectImage(project.id) ? (
-                      <img alt="" loading="lazy" src={getProjectImage(project.id)} />
+                      isVideoProject(project.id) ? (
+                        <video
+                          aria-hidden="true"
+                          muted
+                          playsInline
+                          preload="metadata"
+                          src={getProjectImage(project.id)}
+                        />
+                      ) : (
+                        <img alt="" loading="lazy" src={getProjectImage(project.id)} />
+                      )
                     ) : (
                       <>
                         <span aria-hidden="true" />

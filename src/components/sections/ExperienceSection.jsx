@@ -218,12 +218,16 @@ export default function ExperienceSection({ activeExperience, activeExperienceId
               <div className="exp-journey__skills-group">
                 <span className="exp-journey__skills-label">Stack</span>
                 <div className="exp-journey__skills-row">
-                  {activeExperience.technologies.map((tech) => (
-                    <span className="exp-journey__chip exp-journey__chip--stack" key={tech}>
-                      <img alt="" loading="lazy" src={getExperienceTechIcon(tech, experienceTechIcons)} />
-                      {tech}
-                    </span>
-                  ))}
+                  {activeExperience.technologies.map((tech) => {
+                    const techIcon = getExperienceTechIcon(tech, experienceTechIcons)
+
+                    return (
+                      <span className="exp-journey__chip exp-journey__chip--stack" key={tech}>
+                        {techIcon ? <img alt="" loading="lazy" src={techIcon} /> : null}
+                        {tech}
+                      </span>
+                    )
+                  })}
                 </div>
               </div>
             </div>

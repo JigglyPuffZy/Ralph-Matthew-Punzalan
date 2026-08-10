@@ -7,7 +7,6 @@ export const resumeDownloadName = 'Ralph_Matthew_Punzalan_Resume.pdf'
 
 export const lockedPortfolioProjectIds = new Set([
   'marians-pottery',
-  'network-homeowners',
   'quiz-whirl-app',
   'trireg-mobile-app',
   'trireg-web',
