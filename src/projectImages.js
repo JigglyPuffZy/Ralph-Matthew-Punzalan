@@ -16,12 +16,10 @@ import vertereWeb from './assets/vertere web.png'
 import vtrackMobile from './assets/Vtrack mobile.png'
 import vtrackWeb from './assets/vtrack web dashboard.png'
 
-// Video imports
-import keaBabiesVideo from './assets/SampleTas-KeaBabies.mp4'
-import sellingCourseVideo from './assets/SellingCourse_YouTubeLongForm.mp4'
-import disorderVideo from './assets/THEY TOLD ME I HAD A DISORDER.mp4'
-import webhouseVideo from './assets/WebhouseTrial_2.mp4'
-import lashonharaVideo from './assets/LASHONHARA_v5.mp4'
+const githubVideoBase =
+  'https://media.githubusercontent.com/media/JigglyPuffZy/Ralph-Matthew-Punzalan/main/src/assets'
+
+const githubVideo = (filename) => `${githubVideoBase}/${encodeURIComponent(filename)}`
 
 export const projectImages = {
   'a7-recruitment': a7Thumbnail,
@@ -46,12 +44,12 @@ export const projectImages = {
   'vtrack-uiux-mobile': vtrackMobile,
   'vtrack-uiux-web': vtrackWeb,
   'vtrack-web-mobile': vtrackWeb,
-  // Video projects
-  'kea-babies-video': keaBabiesVideo,
-  'selling-course-video': sellingCourseVideo,
-  'disorder-video': disorderVideo,
-  'webhouse-trial-video': webhouseVideo,
-  'lashonhara-video': lashonharaVideo,
+  // Stream from GitHub LFS CDN — Vercel builds do not pull Git LFS files.
+  'kea-babies-video': githubVideo('SampleTas-KeaBabies.mp4'),
+  'selling-course-video': githubVideo('SellingCourse_YouTubeLongForm.mp4'),
+  'disorder-video': githubVideo('THEY TOLD ME I HAD A DISORDER.mp4'),
+  'webhouse-trial-video': githubVideo('WebhouseTrial_2.mp4'),
+  'lashonhara-video': githubVideo('LASHONHARA_v5.mp4'),
 }
 
 export const getProjectImage = (projectId) => projectImages[projectId] ?? null
