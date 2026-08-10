@@ -1,4 +1,4 @@
-import { getProjectImage, getProjectPreviewMode, isVideoProject } from '../../projectImages'
+import { getProjectImage, getProjectPreviewMode, getProjectVideoSrc, isVideoProject } from '../../projectImages'
 import { featuredTechIcons } from '../../data/techIcons'
 import {
   getProjectActionLabel,
@@ -134,7 +134,7 @@ export default function FeaturedWorkSection({ featured }) {
               <div className="featured-work__preview-track">
                 {getProjectImage(activeProject.id) ? (
                   <div
-                    className={`featured-work__preview featured-work__preview--${getProjectPreviewMode(activeProject)} featured-work__preview--${activeCategory.accent} ${featuredMotionClass}`}
+                    className={`featured-work__preview featured-work__preview--${getProjectPreviewMode(activeProject)} featured-work__preview--${activeCategory.accent}${isVideoProject(activeProject.id) ? ' featured-work__preview--video' : ''} ${featuredMotionClass}`}
                     key={featuredMotionKey}
                   >
                     <div className={`featured-work__preview-stage${isMobileShowcase ? ' featured-work__preview-stage--mobile' : ''}`}>
@@ -143,11 +143,11 @@ export default function FeaturedWorkSection({ featured }) {
                         <video
                           key={activeProject.id}
                           aria-label={`${activeProject.title} preview`}
-                          className={`featured-work__preview-shot${isMobileShowcase ? ' featured-work__preview-shot--mobile' : ''}`}
+                          className="featured-work__preview-shot featured-work__preview-shot--video"
                           controls
                           playsInline
-                          preload="metadata"
-                          src={getProjectImage(activeProject.id)}
+                          preload="auto"
+                          src={getProjectVideoSrc(activeProject.id)}
                         />
                       ) : (
                         <img
@@ -277,16 +277,25 @@ export default function FeaturedWorkSection({ featured }) {
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <div className="featured-work__gallery-media">
-                  <div className={`featured-work__gallery-thumb featured-work__gallery-thumb--${activeCategory.accent}${isMobileShowcase ? ' featured-work__gallery-thumb--mobile' : ''}`}>
+                  <div className={`featured-work__gallery-thumb featured-work__gallery-thumb--${activeCategory.accent}${isMobileShowcase ? ' featured-work__gallery-thumb--mobile' : ''}${isVideoProject(project.id) ? ' featured-work__gallery-thumb--video' : ''}`}>
                     {getProjectImage(project.id) ? (
                       isVideoProject(project.id) ? (
-                        <video
-                          aria-hidden="true"
-                          muted
-                          playsInline
-                          preload="metadata"
-                          src={getProjectImage(project.id)}
-                        />
+                        <>
+                          <video
+                            aria-hidden="true"
+                            className="featured-work__gallery-video"
+                            muted
+                            playsInline
+                            preload="metadata"
+                            src={getProjectVideoSrc(project.id, { posterFrame: true })}
+                            tabIndex={-1}
+                          />
+                          <span className="featured-work__gallery-play" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                              <path d="M9 7.5v9l8-4.5-8-4.5z" />
+                            </svg>
+                          </span>
+                        </>
                       ) : (
                         <img alt="" loading="lazy" src={getProjectImage(project.id)} />
                       )

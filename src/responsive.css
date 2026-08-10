@@ -188,7 +188,7 @@
   }
 
   .featured-work__visual {
-    order: 1;
+    order: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,7 +205,7 @@
   }
 
   .featured-work__info {
-    order: 2;
+    order: 1;
     width: 100%;
     height: auto;
     padding: 0;
@@ -234,6 +234,27 @@
     max-width: 100%;
     height: auto;
     max-height: min(360px, 50vh);
+  }
+
+  .featured-work__preview--video .featured-work__preview-stage {
+    width: 100%;
+    max-width: 100%;
+    max-height: min(calc((100vw - 64px) * 0.56), 50vh);
+    margin: 0 auto;
+  }
+
+  .featured-work__preview-shot--video,
+  .featured-work__preview--video video.featured-work__preview-shot {
+    width: 100%;
+    height: 100%;
+    max-height: min(calc((100vw - 64px) * 0.56), 50vh);
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .featured-work__preview-track {
+    align-items: center;
+    justify-content: center;
   }
 
   .featured-work__info h3 {
@@ -347,10 +368,15 @@
     padding-inline: 0;
     overflow-x: auto;
     overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 4px;
+    gap: 12px;
+    -webkit-overflow-scrolling: touch;
   }
 
   .featured-work__gallery-card {
     flex: 0 0 min(78%, 280px);
+    scroll-snap-align: start;
   }
 
   .workflow-canvas {
@@ -579,7 +605,7 @@
 
 @media (max-width: 768px) {
   .featured-work {
-    padding: max(84px, calc(env(safe-area-inset-top) + 68px)) 16px 56px;
+    padding: 40px 16px 52px;
   }
 
   .featured-work__main {
@@ -587,7 +613,7 @@
   }
 
   .featured-work__visual {
-    padding-bottom: 52px;
+    padding-bottom: 0;
   }
 
   .featured-work__preview-shot {
@@ -899,6 +925,8 @@
     max-width: 100%;
     margin-inline: auto;
     justify-items: center;
+    gap: 24px;
+    transform: none;
   }
 
   .hero-copy {
@@ -909,10 +937,11 @@
   }
 
   .hero-title {
-    width: max-content;
+    width: 100%;
     max-width: 100%;
-    padding-inline: clamp(12px, 5vw, 20px);
-    font-size: clamp(1.75rem, 7.8vw, 2.75rem);
+    padding-inline: clamp(8px, 4vw, 16px);
+    font-size: clamp(1.85rem, 8.2vw, 2.65rem);
+    line-height: 1.08;
     margin-inline: auto;
   }
 
@@ -1105,5 +1134,80 @@
 
   .hero-title {
     font-size: clamp(1.65rem, 7.8vw, 2.2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-shell {
+    min-height: 100dvh;
+    min-height: 100svh;
+  }
+
+  #about,
+  #experience,
+  #contact {
+    scroll-margin-top: max(72px, calc(env(safe-area-inset-top) + 56px));
+  }
+
+  .about-dashboard__head-copy,
+  .about-dashboard__showcase,
+  .about-dashboard__showcase-copy {
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-dashboard__showcase-copy p,
+  .about-dashboard__intro p {
+    margin-inline: auto;
+    max-width: 36rem;
+  }
+
+  .about-dashboard__layout {
+    gap: 14px;
+  }
+
+  .about-dashboard__grid {
+    gap: 14px;
+  }
+
+  .exp-journey {
+    padding: 44px 16px 48px;
+  }
+
+  .featured-work__tabs {
+    scroll-snap-type: x mandatory;
+  }
+
+  .featured-work__tab {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    min-width: max(92px, 22vw);
+  }
+
+  .featured-work__details {
+    padding: 14px;
+  }
+
+  .featured-work__intel li {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) and (hover: none) {
+  .about-dashboard__showcase:hover,
+  .about-dashboard__metrics:hover,
+  .about-dashboard__quote:hover,
+  .about-dashboard__details:hover,
+  .about-dashboard__tile:hover {
+    transform: none;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 18px 48px rgba(0, 0, 0, 0.32);
+  }
+
+  .featured-work__gallery-card:hover,
+  .tool-chip:hover,
+  .hero-button:hover {
+    transform: none;
   }
 }

@@ -54,8 +54,16 @@ export const projectImages = {
 
 export const getProjectImage = (projectId) => projectImages[projectId] ?? null
 
-export const getProjectPreviewMode = (project) =>
-  project?.platform === 'Mobile' ? 'mobile' : 'desktop'
+export const getProjectVideoSrc = (projectId, { posterFrame = false } = {}) => {
+  const src = getProjectImage(projectId)
+  if (!src || !isVideoProject(projectId)) return src
+  return posterFrame ? `${src}#t=0.1` : src
+}
+
+export const getProjectPreviewMode = (project) => {
+  if (project?.id && isVideoProject(project.id)) return 'video'
+  return project?.platform === 'Mobile' ? 'mobile' : 'desktop'
+}
 
 export const isVideoProject = (projectId) => {
   const videoProjectIds = [
